@@ -173,9 +173,15 @@ body.ud-line-spaced, body.ud-line-spaced * { line-height: var(--ud-line-height, 
 .home-heading p{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
 .transfer-card{background:#fff;border:1px solid var(--border);border-left:5px solid var(--red);padding:22px 24px;margin-bottom:17px}
 .transfer-eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--red);font-weight:700;margin-bottom:8px}
+.front-cpr{font-size:13px;color:var(--muted);margin:-2px 0 12px}
+.front-cpr strong{color:var(--blue);font-weight:700;margin-left:4px;letter-spacing:.03em}
+
 .transfer-card h2{font-size:25px;color:var(--blue);margin:0 0 7px}
 .transfer-route{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:14px;margin-bottom:17px}
 .transfer-route span{font-size:20px;color:var(--teal)}
+.patient-cpr-front{display:flex;align-items:baseline;gap:10px;margin:2px 0 16px;padding-top:2px}
+.patient-cpr-front span{font-size:12px;color:var(--muted)}
+.patient-cpr-front strong{font-size:15px;color:var(--blue);letter-spacing:.03em}
 .transfer-details{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 18px}
 .transfer-details>div{background:#f7f9fa;border:1px solid #e4eaed;padding:11px}
 .transfer-details small{display:block;color:var(--muted);font-size:11px;margin-bottom:3px}
@@ -370,14 +376,16 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
           <section class="transfer-card" aria-labelledby="transfer-title">
             <div class="transfer-eyebrow">Ny patientoverførsel · 1</div>
             <h2 id="transfer-title">Anders Jensen</h2>
+            <div class="front-cpr"><span>CPR-nummer</span> <strong>011026-0000</strong></div>
             <div class="transfer-route">
               <strong>Aarhus Universitetshospital · Intensiv</strong>
               <span aria-hidden="true">→</span>
               <strong>Aalborg Universitetshospital · Intensiv</strong>
             </div>
+            <div class="patient-cpr-front"><span>CPR-nummer</span><strong>011026-0000</strong></div>
             <div class="transfer-details">
               <div><small>Status</small><strong>Afventer modtagelse</strong></div>
-              <div><small>Planlagt</small><strong>01.10.2026 · 06:42</strong></div>
+              <div><small>Planlagt</small><strong>011026-0000 · 06:42</strong></div>
             </div>
             <button class="btn btn-red" id="open-notification">Åbn patientoverførsel</button>
           </section>
@@ -399,7 +407,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
           <div class="patient-head">
             <div class="label">Patient</div>
             <div class="patient-name">Anders Jensen</div>
-            <div class="patient-cpr">CPR: 1</div>
+            <div class="patient-cpr">CPR: 011026-0000</div>
             <div class="patient-actions">
               <button class="btn btn-teal" id="show-journal">Journalnotater</button>
               <button class="btn btn-outline" id="show-timeline">Patientforløb</button>
@@ -425,7 +433,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
             <h2 style="margin:0 0 5px">Patientforløb</h2>
             <p class="lead">Kronologisk overblik over det aktuelle forløb.</p>
             <div class="timeline">
-              <div class="event"><div class="event-date">01.10.2026 · 06:42</div><div class="event-title">Overflytning planlagt</div><div class="event-text">Patienten er registreret til overflytning fra Aarhus Universitetshospital til Aalborg Universitetshospital.</div></div>
+              <div class="event"><div class="event-date">011026-0000 · 06:42</div><div class="event-title">Overflytning planlagt</div><div class="event-text">Patienten er registreret til overflytning fra Aarhus Universitetshospital til Aalborg Universitetshospital.</div></div>
               <div class="event"><div class="event-date">30.09.2026 · 22:15</div><div class="event-title">Indlagt på intensiv</div><div class="event-text">Patienten er modtaget på Aarhus Universitetshospital, Intensiv.</div></div>
               <div class="event"><div class="event-date">30.09.2026 · 18:30</div><div class="event-title">Akut vurdering</div><div class="event-text">Patienten er vurderet med behov for intensiv monitorering.</div></div>
             </div>
@@ -478,21 +486,21 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
   }
 
   $("open-notification").onclick=()=>{
-    $("cpr").value="1";
+    $("cpr").value="011026-0000";
     $("search-btn").click();
   };
 
   $("search-btn").onclick=()=>{
     const cpr=$("cpr").value.trim();
     if(cpr==="1"){
-      $("search-status").innerHTML="<strong>Patient fundet:</strong> Anders Jensen · CPR 1";
-      $("results").innerHTML='<div class="result-card" role="button" tabindex="0"><strong>Anders Jensen</strong><span>CPR: 1 · Aarhus Universitetshospital · Intensiv</span></div>';
+      $("search-status").innerHTML="<strong>Patient fundet:</strong> Anders Jensen · CPR 011026-0000";
+      $("results").innerHTML='<div class="result-card" role="button" tabindex="0"><strong>Anders Jensen</strong><span>CPR: 011026-0000 · Aarhus Universitetshospital · Intensiv</span></div>';
       const result=$("results").firstElementChild;
       result.onclick=()=>{showPluginPage("patient");activateTab("journal")};
       result.onkeydown=e=>{if(e.key==="Enter")result.click()};
       showPluginPage("patient");activateTab("journal");
     }else{
-      $("search-status").textContent="Ingen patient fundet. Prøv CPR 1.";
+      $("search-status").textContent="Ingen patient fundet. Prøv CPR 011026-0000.";
       $("results").innerHTML="";
       showPluginPage("home");
     }
@@ -510,7 +518,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
   $("show-transfer").onclick=()=>activateTab("transfer");
 
   $("notes").innerHTML=`
-    <article class="note"><div class="note-top"><span class="note-title">Aktuelt forløb</span><span class="note-date">01.10.2026 · 06:42</span></div><div class="source">Intensivjournal · Aarhus Universitetshospital</div><p class="note-text">Patienten er stabiliseret og planlagt til overflytning til Aalborg Universitetshospital. Modtagende afdeling er Aalborg Universitetshospital, Intensiv.</p><span class="tag">Overflytning</span></article>
+    <article class="note"><div class="note-top"><span class="note-title">Aktuelt forløb</span><span class="note-date">011026-0000 · 06:42</span></div><div class="source">Intensivjournal · Aarhus Universitetshospital</div><p class="note-text">Patienten er stabiliseret og planlagt til overflytning til Aalborg Universitetshospital. Modtagende afdeling er Aalborg Universitetshospital, Intensiv.</p><span class="tag">Overflytning</span></article>
     <article class="note"><div class="note-top"><span class="note-title">Intensiv vurdering</span><span class="note-date">30.09.2026 · 22:15</span></div><div class="source">Lægenotat · Aarhus Universitetshospital</div><p class="note-text">Fortsat behov for tæt monitorering. Behandlingsplan og relevante oplysninger er gjort klar til den modtagende afdeling.</p></article>
     <article class="note"><div class="note-top"><span class="note-title">Observation</span><span class="note-date">30.09.2026 · 18:30</span></div><div class="source">Sygeplejenotat · Aarhus Universitetshospital</div><p class="note-text">Patienten observeres kontinuerligt. Der er dokumenteret løbende status og behandling.</p></article>
     <article class="note"><div class="note-top"><span class="note-title">Akut vurdering</span><span class="note-date">30.09.2026 · 17:55</span></div><div class="source">Akut vurdering · Aarhus Universitetshospital</div><p class="note-text">Patienten er vurderet med behov for intensiv monitorering og videre behandling på intensiv afdeling.</p></article>`;
