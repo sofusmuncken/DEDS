@@ -293,7 +293,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
       <div class="field"><label for="username">Brugernavn</label><input id="username" autocomplete="off" placeholder="Brugernavn"></div>
       <div class="field"><label for="password">Adgangskode</label><input id="password" type="password" placeholder="Adgangskode"></div>
       <button class="btn btn-red" style="width:100%" id="login-btn">Log på</button>
-      <div class="demo">Prototype-login: <strong>testesen</strong> / <strong>1234</strong><br>Dette er en lokal simulation af loginflowet.</div>
+      <div class="demo">Prototype-login: <strong>test</strong> / <strong>1234</strong><br>Dette er en lokal simulation af loginflowet.</div>
     </section>
   </main>
 </div>
@@ -315,7 +315,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
       <p class="muted">Du er blevet viderestillet fra sundhed.dk til den centrale login-/brugerstyringsløsning.</p>
       <div class="identity">
         <small>Valgt bruger</small>
-        <strong>testesen</strong>
+        <strong>test</strong>
         <div style="font-size:13px;color:#61788a;margin-top:4px">Læge · Aalborg Universitetshospital · Intensiv</div>
       </div>
       <p class="muted">I denne prototype er identiteten allerede verificeret.</p>
@@ -339,7 +339,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
         <span>Sundhedsjournal</span>
         <span>Patientforløb</span>
       </nav>
-      <div class="user-chip"><strong>testesen</strong>Læge · Aalborg UH · Intensiv</div>
+      <div class="user-chip"><strong>test</strong>Læge · Aalborg UH · Intensiv</div>
     </div>
   </header>
   <div class="breadcrumb"><div class="inner">Fagperson › Patientbehandling › Patientoverførsel</div></div>
@@ -462,7 +462,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
   $("public-login").onclick=()=>show("login-screen");
   $("hero-login").onclick=()=>show("login-screen");
   $("login-btn").onclick=()=>{
-    if($("username").value.trim()==="testesen" && $("password").value==="1234"){
+    if($("username").value.trim()==="test" && $("password").value==="1234"){
       $("login-error").classList.add("hidden"); show("auth-screen");
     }else $("login-error").classList.remove("hidden");
   };
