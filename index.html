@@ -31,7 +31,7 @@ a{color:inherit}
 .public-nav button{border:0;background:transparent;padding:0 14px;color:var(--ink2);border-bottom:4px solid transparent}
 .public-nav button.active{font-weight:700;color:var(--red);border-color:var(--red)}
 .header-action{border:1px solid var(--red);background:var(--panel);color:var(--red);padding:10px 18px;font-weight:700}
-.header-action:hover{background:var(--panel)4f5}
+.header-action:hover{background:#fff4f5}
 .menu-btn{border:0;background:transparent;color:var(--blue);font-weight:700}
 
 /* Public landing */
@@ -111,7 +111,7 @@ a{color:inherit}
 .patient-head{background:var(--panel);border:1px solid var(--border);padding:22px}.label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .patient-name{font-size:26px;font-weight:700;margin:3px 0}.patient-cpr{color:var(--muted);font-size:14px}
 .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0 24px}
-.info{background:var(--panel);border:1px solid var(--border);padding:15px}.info small{display:block;color:var(--muted);margin-bottom:5px}.pill{display:inline-block;background:var(--panel)5e2;color:#8b611e;padding:4px 8px;font-size:12px;font-weight:700}
+.info{background:var(--panel);border:1px solid var(--border);padding:15px}.info small{display:block;color:var(--muted);margin-bottom:5px}.pill{display:inline-block;background:#fff5e2;color:#8b611e;padding:4px 8px;font-size:12px;font-weight:700}
 .tabs{display:flex;border-bottom:1px solid var(--border);margin-top:22px}
 .tab{background:transparent;border:0;border-bottom:3px solid transparent;padding:12px 16px;color:var(--muted2);font-weight:700}.tab.active{color:var(--teal);border-color:var(--teal)}
 .note{background:var(--panel);border:1px solid var(--border);padding:18px;margin:0 0 12px}.note.clickable{cursor:pointer;transition:border-color .15s,background .15s}.note.clickable:hover{border-color:var(--teal);background:var(--panel2)}.note.clickable:focus-visible{outline:3px solid #8fd0d8;outline-offset:2px}.note-top{display:flex;justify-content:space-between;gap:15px}.note-title{font-weight:700}.note-date{font-size:13px;color:var(--muted)}.note-action{color:var(--teal);font-size:13px;font-weight:700;white-space:nowrap}.source{font-size:13px;color:var(--teal);margin:6px 0 10px}.note-text{font-size:14px;line-height:1.65;color:var(--ink2);margin:0}.note-detail{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);color:var(--ink2);font-size:14px;line-height:1.6}.note.open .note-detail{display:block}.tag{display:inline-block;background:var(--panel3);color:var(--muted2);font-size:12px;padding:4px 8px;margin-top:11px}
@@ -216,6 +216,20 @@ body.ud-targets .a11y-actions button{padding:13px}
 .gdpr-check input{margin-top:3px;width:18px;height:18px;flex:none}
 .gdpr-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap}
 .gdpr-actions .btn{border-radius:6px}
+
+
+/* ===== Overfør til EPJ ===== */
+body.ud-dark .header-action:hover{background:var(--panel2)}
+.epj-field{display:block;font-size:13px;font-weight:700;color:var(--blue);margin:14px 0 6px}
+#epj-hospital{width:100%;height:48px;padding:0 12px;font-size:15px;color:var(--ink);background:var(--panel2);border:1.5px solid var(--border2);border-radius:8px}
+#epj-hospital:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(0,124,145,.16)}
+.epj-hint{font-size:13px;color:var(--muted);margin:8px 0 16px;border-left:4px solid transparent;padding:2px 0 2px 10px}
+.epj-hint.warn{color:#8b611e;background:#fff5e2;border-left-color:#d98a00;padding:8px 10px;border-radius:4px}
+.epj-result{margin-top:14px;background:var(--success-bg);border:1px solid #acd1ba;color:#285e42;border-radius:6px;padding:14px 16px;font-size:14px;line-height:1.5}
+#epj-send[disabled]{opacity:.75;cursor:default}
+body.ud-dark .epj-hint.warn{background:#3b2f14;color:#f3cf8a}
+body.ud-dark .epj-result{color:#a8e6c3;border-color:#2f6b4c}
+body.ud-targets #epj-hospital{min-height:54px}
 
 /* ===== Tilgængelighed (Universal design) ===== */
 .ud{position:fixed;bottom:20px;right:20px;z-index:2000;background:transparent}
@@ -563,6 +577,21 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
             <div class="info"><small>Overførselsstatus</small><span class="pill success">Modtaget</span></div>
           </div>
           <div class="success" style="margin-bottom:16px"><strong>Overflytningen er bekræftet</strong>Journalnotater og patientforløb er nu tilgængelige.</div>
+          <section class="panel" id="epj-panel">
+            <div class="panel-title">Overfør til EPJ</div>
+            <p class="panel-sub">Send journalnotater og patientforløb til det EPJ-system, hvor patienten skal behandles.</p>
+            <label class="epj-field" for="epj-hospital">Modtagende hospital</label>
+            <select id="epj-hospital">
+              <option value="aalborg" selected>Aalborg Universitetshospital · NordEPJ</option>
+              <option value="aarhus">Aarhus Universitetshospital · MidtEPJ</option>
+              <option value="odense">Odense Universitetshospital · EPJ SYD</option>
+              <option value="rigshospitalet">Rigshospitalet · Sundhedsplatformen</option>
+              <option value="roskilde">Sjællands Universitetshospital · Sundhedsplatformen</option>
+            </select>
+            <div class="epj-hint" id="epj-hint"></div>
+            <button class="btn btn-teal" id="epj-send" type="button">Overfør til EPJ</button>
+            <div class="epj-result hidden" id="epj-result" role="status"></div>
+          </section>
           <div class="tabs">
             <button class="tab active" data-tab="journal">Journalnotater</button>
             <button class="tab" data-tab="timeline">Forløb</button>
@@ -665,9 +694,52 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
 
   $("open-notification").onclick=openTransferForConfirmation;
 
+  // Overfør til EPJ
+  const MY_HOSPITAL="aalborg";
+  const EPJ_NAMES={
+    aalborg:["Aalborg Universitetshospital","Aalborg University Hospital","NordEPJ"],
+    aarhus:["Aarhus Universitetshospital","Aarhus University Hospital","MidtEPJ"],
+    odense:["Odense Universitetshospital","Odense University Hospital","EPJ SYD"],
+    rigshospitalet:["Rigshospitalet","Rigshospitalet","Sundhedsplatformen"],
+    roskilde:["Sjællands Universitetshospital","Zealand University Hospital","Sundhedsplatformen"]
+  };
+  let epjDone=null;
+  const tr=(da,en)=>english?en:da;
+  function refreshEpj(){
+    const key=$("epj-hospital").value, same=key===MY_HOSPITAL;
+    const h=$("epj-hint");
+    h.textContent=same
+      ? tr("Dit hospital er valgt som standard, fordi du er logget på fra Aalborg Universitetshospital.","Your hospital is selected by default because you are logged in from Aalborg University Hospital.")
+      : tr("Du overfører til et andet hospital end det, du er logget på fra.","You are transferring to a different hospital than the one you are logged in from.");
+    h.classList.toggle("warn",!same);
+    const r=$("epj-result"), b=$("epj-send");
+    if(epjDone){
+      const n=EPJ_NAMES[epjDone.key];
+      r.textContent=tr("✔ Journalnotater (4) og patientforløb er overført til "+n[2]+" ("+n[0]+") kl. "+epjDone.time+".","✔ Journal notes (4) and patient course have been transferred to "+n[2]+" ("+n[1]+") at "+epjDone.time+".");
+      r.classList.remove("hidden");
+      b.disabled=true;$("epj-hospital").disabled=true;
+      b.textContent=tr("Overført ✔","Transferred ✔");
+    }else{
+      r.classList.add("hidden");
+      b.disabled=false;$("epj-hospital").disabled=false;
+      b.textContent=tr("Overfør til EPJ","Transfer to EPJ");
+    }
+  }
+  function resetEpj(){epjDone=null;$("epj-hospital").value=MY_HOSPITAL;refreshEpj()}
+  $("epj-hospital").onchange=refreshEpj;
+  $("epj-send").onclick=()=>{
+    const b=$("epj-send");
+    b.disabled=true;b.textContent=tr("Overfører…","Transferring…");
+    setTimeout(()=>{
+      epjDone={key:$("epj-hospital").value,time:new Date().toLocaleTimeString("da-DK",{hour:"2-digit",minute:"2-digit"})};
+      refreshEpj();
+    },1200);
+  };
+
   $("confirm-receipt").onclick=()=>{
     showPluginPage("patient");
     activateTab("journal");
+    resetEpj();
   };
 
   $("search-btn").onclick=()=>{
@@ -901,6 +973,14 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     "Undgå oplæsning på gange og i åbne arealer.":"Avoid reading aloud in corridors and open areas.",
     "Udelad patientnavn og CPR-nummer i oplæsningen":"Omit patient name and CPR number when reading aloud",
     "Jeg forstår – læs op":"I understand – read aloud",
+    "Overfør til EPJ":"Transfer to EPJ",
+    "Send journalnotater og patientforløb til det EPJ-system, hvor patienten skal behandles.":"Send journal notes and patient course to the EPJ system where the patient will be treated.",
+    "Modtagende hospital":"Receiving hospital",
+    "Aalborg Universitetshospital · NordEPJ":"Aalborg University Hospital · NordEPJ",
+    "Aarhus Universitetshospital · MidtEPJ":"Aarhus University Hospital · MidtEPJ",
+    "Odense Universitetshospital · EPJ SYD":"Odense University Hospital · EPJ SYD",
+    "Rigshospitalet · Sundhedsplatformen":"Rigshospitalet · Sundhedsplatformen",
+    "Sjællands Universitetshospital · Sundhedsplatformen":"Zealand University Hospital · Sundhedsplatformen",
     "Luk":"Close"
   };
   let english=false;
@@ -926,6 +1006,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
   $("translate").onclick=()=>{
     english=!english;
     translateTree(english);
+    refreshEpj();
     $("translate").setAttribute("aria-pressed",String(english));
     $("ud-status").textContent=english?"English enabled":"Dansk aktiveret";
   };
@@ -989,7 +1070,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     $("size").value=16;$("line").value=1.5;
     ["contrast","translate","dark","targets"].forEach(id=>$(id).setAttribute("aria-pressed","false"));
     if(english)translateTree(false);
-    english=false;document.documentElement.lang="da";setReadingControls(false);
+    english=false;refreshEpj();document.documentElement.lang="da";setReadingControls(false);
     $("ud-status").textContent="Indstillinger nulstillet";
   };
 
