@@ -22,6 +22,7 @@ a{color:inherit}
 .site-header{background:#fff;border-bottom:1px solid var(--border)}
 .site-header .inner{width:min(1180px,calc(100% - 40px));height:72px;margin:auto;display:flex;align-items:center;gap:32px}
 .sd-logo{font-size:27px;font-weight:700;letter-spacing:-1.5px;color:var(--red);white-space:nowrap}
+.sd-heart{display:inline-block;width:.36em;height:.36em;margin:0 .08em 0 .12em;fill:currentColor;transform:rotate(14deg);vertical-align:baseline}
 .public-nav{display:flex;align-items:stretch;height:100%;gap:4px;flex:1}
 .public-nav button{border:0;background:transparent;padding:0 14px;color:#344d61;border-bottom:4px solid transparent}
 .public-nav button.active{font-weight:700;color:var(--red);border-color:var(--red)}
@@ -224,7 +225,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
 <div id="public-screen">
   <header class="site-header">
     <div class="inner">
-      <div class="sd-logo">sundhed.dk</div>
+      <div class="sd-logo" role="img" aria-label="sundhed.dk">sundhed<svg class="sd-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 4.5 6.4 4.5c2.1 0 3.9 1.2 5.6 3.2 1.7-2 3.5-3.2 5.6-3.2 3.7 0 5.5 3.9 4 7.3C19.5 16.4 12 21 12 21z"/></svg>dk</div>
       <nav class="public-nav">
         <button>Borger</button>
         <button class="active">Fagperson</button>
@@ -258,7 +259,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
 <div id="login-screen" class="hidden">
   <header class="site-header">
     <div class="inner">
-      <div class="sd-logo">sundhed.dk</div>
+      <div class="sd-logo" role="img" aria-label="sundhed.dk">sundhed<svg class="sd-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 4.5 6.4 4.5c2.1 0 3.9 1.2 5.6 3.2 1.7-2 3.5-3.2 5.6-3.2 3.7 0 5.5 3.9 4 7.3C19.5 16.4 12 21 12 21z"/></svg>dk</div>
       <nav class="public-nav">
         <button>Borger</button>
         <button class="active">Fagperson</button>
@@ -326,7 +327,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
 <div id="plugin-screen" class="hidden">
   <header class="plugin-header">
     <div class="inner">
-      <div class="sd-logo" style="font-size:23px">sundhed.dk</div>
+      <div class="sd-logo" style="font-size:23px" role="img" aria-label="sundhed.dk">sundhed<svg class="sd-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 4.5 6.4 4.5c2.1 0 3.9 1.2 5.6 3.2 1.7-2 3.5-3.2 5.6-3.2 3.7 0 5.5 3.9 4 7.3C19.5 16.4 12 21 12 21z"/></svg>dk</div>
       <div class="plugin-brand">Patientoverførsel</div>
       <nav class="plugin-nav" aria-label="Primær navigation"></nav>
       <div class="user-chip"><strong>test</strong>Læge · Aalborg UH · Intensiv</div>
@@ -397,7 +398,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
             <div class="info-grid" style="margin-top:12px">
               <div class="info"><small>Planlagt overflytning</small><strong>02.10.2026 · 10:30</strong></div>
               <div class="info"><small>Status</small><span class="pill">Afventer modtagelse</span></div>
-              <div class="info"><small>CPR-nummer</small><strong>011026-0000</strong></div>
+              <div class="info"><small>Patientnummer</small><strong>1</strong></div>
             </div>
             <button class="btn btn-teal" id="confirm-receipt">Bekræft modtagelse</button>
           </section>
