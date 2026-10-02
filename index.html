@@ -56,15 +56,19 @@ a{color:inherit}
 .card h3{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
 
 /* Login */
-.login-shell{min-height:calc(100vh - 122px);display:flex;align-items:flex-start;justify-content:center;padding:55px 20px}
-.login-card{width:480px;background:#fff;border:1px solid var(--border);padding:34px}
-.login-card h1{font-size:30px;margin:0 0 8px;color:var(--blue)}
-.login-card p{color:var(--muted);line-height:1.5}
-.field{margin:20px 0}.field label{display:block;font-weight:700;font-size:14px;margin-bottom:7px}
-.field input{width:100%;padding:13px;border:1px solid #9baeb9;border-radius:2px}
-.field input:focus{outline:3px solid #8fd0d8;outline-offset:1px}
-.error{background:#fff0f1;border:1px solid #d7a2a8;color:#8c2634;padding:11px 12px;font-size:14px}
-.demo{font-size:12px;color:#708696;margin-top:18px;padding-top:15px;border-top:1px solid var(--border)}
+.login-shell{min-height:calc(100vh - 72px);display:flex;align-items:flex-start;justify-content:center;padding:58px 20px}
+.login-card{width:500px;background:#fff;border:1px solid var(--border);padding:34px 38px}
+.login-card h1{font-size:28px;line-height:1.2;margin:0 0 10px;color:var(--blue)}
+.login-card p{color:var(--muted);line-height:1.55;font-size:15px;margin:0 0 24px}
+.login-choice{border-top:1px solid var(--border);padding-top:22px}
+.login-choice h2{font-size:18px;margin:0 0 7px;color:var(--blue)}
+.login-choice p{font-size:14px;margin-bottom:16px}
+.nemlogin-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:12px;border:0;border-radius:3px;background:#17324d;color:#fff;padding:14px 18px;font-weight:700;font-size:16px}
+.nemlogin-btn:hover{background:#10283d}
+.mitid-mark{background:#fff;color:#17324d;border-radius:3px;padding:4px 7px;font-weight:800;font-size:13px;letter-spacing:.02em}
+.login-help{display:block;margin-top:18px;color:var(--teal);font-size:14px;font-weight:700;text-decoration:none}
+.login-note{font-size:12px!important;color:#708696!important;margin-top:20px!important;margin-bottom:0!important}
+.login-divider{display:flex;align-items:center;gap:12px;margin:22px 0;color:var(--muted);font-size:13px}.login-divider:before,.login-divider:after{content:"";height:1px;background:var(--border);flex:1}.login-divider span{white-space:nowrap}.login-choice-mitid{padding-top:0;border-top:0}.login-card .field{margin:16px 0}.login-card .field label{font-size:14px}.login-card .field input{padding:12px}
 
 /* Authentication / Sundhedsdatastyrelsen */
 .auth-page{min-height:calc(100vh - 122px);background:#f1f4f5;padding:35px 20px}
@@ -83,7 +87,7 @@ a{color:inherit}
 /* Plugin */
 .plugin-header{background:#fff;border-bottom:1px solid var(--border)}
 .plugin-header .inner{width:min(1180px,calc(100% - 40px));height:70px;margin:auto;display:flex;align-items:center;gap:30px}
-.plugin-brand{font-weight:800;color:var(--teal);font-size:19px;border-left:4px solid var(--teal);padding-left:12px}
+.plugin-brand{font-weight:700;color:var(--teal);font-size:18px;border-left:4px solid var(--teal);padding-left:12px}
 .plugin-nav{display:flex;flex:1;height:100%}
 .plugin-nav span{display:none}
 .user-chip{font-size:12px;text-align:right}.user-chip strong{display:block}
@@ -97,7 +101,7 @@ a{color:inherit}
 .side.active{background:#e6f1f3;color:#006d7e;border-left:3px solid var(--teal);padding-left:7px;font-weight:700}
 .side:hover{background:#f0f5f6}
 .sidebar hr{border:0;border-top:1px solid var(--border);margin:21px 0}
-.main h1{font-size:31px;margin:0 0 7px;color:var(--blue)}
+.main h1{font-size:30px;margin:0 0 7px;color:var(--blue)}
 .lead{color:var(--muted);font-size:15px;line-height:1.55;margin:0 0 22px}
 .notice{background:#fff;border:1px solid #c8d9df;padding:18px 20px;display:flex;gap:14px;margin-bottom:24px}
 .notice-icon{width:38px;height:38px;border-radius:50%;background:#dff0f2;color:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;flex:none}
@@ -109,62 +113,40 @@ a{color:inherit}
 .result{width:100%;border:1px solid var(--border);background:#fff;padding:17px;display:flex;justify-content:space-between;text-align:left;margin-top:10px}
 .result:hover{border-color:var(--teal);background:#fbfdfd}.result-name{font-weight:700;font-size:17px}.result-meta{font-size:13px;color:var(--muted);margin-top:4px}.arrow{color:var(--teal);font-weight:700}
 .patient-head{background:#fff;border:1px solid var(--border);padding:22px}.label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.patient-name{font-size:27px;font-weight:700;margin:3px 0}.patient-cpr{color:var(--muted);font-size:14px}
-.patient-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}
+.patient-name{font-size:26px;font-weight:700;margin:3px 0}.patient-cpr{color:var(--muted);font-size:14px}
 .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0 24px}
 .info{background:#fff;border:1px solid var(--border);padding:15px}.info small{display:block;color:var(--muted);margin-bottom:5px}.pill{display:inline-block;background:#fff5e2;color:#8b611e;padding:4px 8px;font-size:12px;font-weight:700}
 .tabs{display:flex;border-bottom:1px solid var(--border);margin-top:22px}
 .tab{background:transparent;border:0;border-bottom:3px solid transparent;padding:12px 16px;color:#536c7d;font-weight:700}.tab.active{color:var(--teal);border-color:var(--teal)}
-.note{background:#fff;border:1px solid var(--border);padding:18px;margin:0 0 12px}.note-top{display:flex;justify-content:space-between;gap:15px}.note-title{font-weight:700}.note-date{font-size:13px;color:var(--muted)}.source{font-size:13px;color:var(--teal);margin:6px 0 10px}.note-text{font-size:14px;line-height:1.65;color:#354f61;margin:0}.tag{display:inline-block;background:#edf3f5;color:#536b7c;font-size:12px;padding:4px 8px;margin-top:11px}
+.note{background:#fff;border:1px solid var(--border);padding:18px;margin:0 0 12px}.note.clickable{cursor:pointer;transition:border-color .15s,background .15s}.note.clickable:hover{border-color:var(--teal);background:#fbfdfd}.note.clickable:focus-visible{outline:3px solid #8fd0d8;outline-offset:2px}.note-top{display:flex;justify-content:space-between;gap:15px}.note-title{font-weight:700}.note-date{font-size:13px;color:var(--muted)}.note-action{color:var(--teal);font-size:13px;font-weight:700;white-space:nowrap}.source{font-size:13px;color:var(--teal);margin:6px 0 10px}.note-text{font-size:14px;line-height:1.65;color:#354f61;margin:0}.note-detail{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);color:#354f61;font-size:14px;line-height:1.6}.note.open .note-detail{display:block}.tag{display:inline-block;background:#edf3f5;color:#536b7c;font-size:12px;padding:4px 8px;margin-top:11px}
 .timeline{background:#fff;border:1px solid var(--border);padding:24px 24px 10px;border-left:3px solid var(--teal)}
 .event{margin:0 0 25px}.event-date{font-size:12px;color:var(--muted)}.event-title{font-weight:700;margin-top:3px}.event-text{font-size:14px;color:#536b7c;line-height:1.5;margin-top:4px}
 .transfer-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.transfer-card{background:#fff;border:1px solid var(--border);padding:18px}.transfer-card small{display:block;color:var(--muted);margin-bottom:5px}
 .success{background:var(--success-bg);border:1px solid #acd1ba;color:#285e42;padding:19px}.success strong{display:block;margin-bottom:5px}
 .placeholder{background:#fff;border:1px solid var(--border);padding:28px;color:var(--muted)}
 
-/* Universal design */
-body.ud-contrast{--blue:#000;--ink:#000;--muted:#111;--border:#000;--bg:#fff;--teal:#004e59}
-body.ud-focus *:focus{outline:4px solid #ffbf00!important;outline-offset:3px!important}
-body.ud-readable .note-text{font-family:Georgia,"Times New Roman",serif;font-size:17px;line-height:1.9;max-width:78ch}
-body.ud-readable .lead{max-width:75ch;line-height:1.8}
-body.ud-large{font-size:18px}
-body.ud-large .main h1{font-size:36px}
-body.ud-large .note-text{font-size:18px;line-height:1.75}
-body.ud-reduced *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
-
-/* Responsive */
-@media(max-width:800px){
- .site-header .inner,.ud-inner,.sds-header .inner,.plugin-header .inner,.breadcrumb .inner,.plugin-wrap,.hero-inner,.cards{width:calc(100% - 30px)}
- .public-nav{display:none}.header-action{margin-left:auto}.ud-status{width:100%;margin:0 0 5px}
- .hero h1{font-size:34px}.cards{grid-template-columns:1fr}
- .layout{grid-template-columns:1fr}.sidebar{border-right:0;border-bottom:1px solid var(--border);padding:0 0 12px}
- .info-grid,.transfer-grid{grid-template-columns:1fr}.search{flex-direction:column}.user-chip{display:none}
- .login-shell{padding-top:30px}.login-card,.auth-box{padding:25px}
-}
-
-/* Universal Design: global scaling and line spacing */
-body.ud-line-spaced, body.ud-line-spaced * { line-height: var(--ud-line-height, 1.5) !important; }
-
-/* Compact Universal Design menu */
-.ud{background:var(--blue);color:#fff;min-height:54px}
-.ud-inner{width:min(1180px,calc(100% - 40px));height:54px;margin:auto;display:flex;align-items:center;justify-content:flex-end;position:relative}
-.a11y-trigger{background:#fff;color:var(--blue);border:1px solid #fff;border-radius:3px;padding:8px 13px;font-size:13px;font-weight:700}
-.a11y-trigger:hover{background:#edf4f6}
-.a11y-panel{position:absolute;right:0;top:50px;width:380px;background:#fff;color:var(--ink);border:1px solid var(--border);border-radius:4px;box-shadow:0 12px 30px rgba(0,0,0,.2);padding:19px;z-index:1000}
+/* Accessibility */
+.ud{position:fixed;top:16px;right:18px;z-index:2000}
+.ud-inner{position:relative}
+.a11y-trigger{background:#fff;color:var(--blue);border:1px solid #b9c5cc;border-radius:3px;padding:9px 13px;font-size:13px;font-weight:700;box-shadow:0 3px 10px rgba(0,0,0,.12)}
+.a11y-trigger:hover{background:#f7f9fa}
+.a11y-panel{position:absolute;right:0;top:48px;width:350px;background:#fff;color:var(--ink);border:1px solid var(--border);border-radius:4px;box-shadow:0 12px 30px rgba(0,0,0,.18);padding:18px;z-index:2001}
 .a11y-panel h2{margin:0 0 4px;color:var(--blue);font-size:19px}
-.a11y-intro{margin:0 0 13px;color:var(--muted);font-size:13px;line-height:1.45}
-.a11y-group{border-top:1px solid var(--border);padding-top:12px;margin-top:12px}
-.a11y-slider{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:10px 0}
+.a11y-intro{margin:0 0 12px;color:var(--muted);font-size:13px;line-height:1.45}
+.a11y-group{border-top:1px solid var(--border);padding-top:11px;margin-top:11px}
+.a11y-slider{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:9px 0}
 .a11y-slider span{min-width:0}.a11y-slider strong{display:block;font-size:13px}.a11y-slider small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
-.a11y-slider input{width:135px;flex:none}
+.a11y-slider input{width:130px;flex:none}
 .a11y-option{width:100%;text-align:left;background:#f7f9fa;color:var(--ink);border:1px solid var(--border);border-radius:3px;padding:9px 10px;margin:4px 0}
 .a11y-option:hover{background:#edf4f6}
 .a11y-option[aria-pressed=true]{border-color:var(--teal);background:#e9f4f5}
 .a11y-option strong{display:block;font-size:13px}.a11y-option small{display:block;color:var(--muted);font-size:11px;line-height:1.3;margin-top:2px}
-.a11y-actions{display:flex;gap:8px;margin-top:12px}
-.a11y-actions button{flex:1;padding:8px;border-radius:3px;border:1px solid var(--border);background:#fff;color:var(--blue);font-weight:700}
-.a11y-actions button:last-child{background:var(--blue);border-color:var(--blue);color:#fff}
+.a11y-actions{display:flex;gap:8px;margin-top:12px}.a11y-actions button{flex:1;padding:8px;border-radius:3px;border:1px solid var(--border);background:#fff;color:var(--blue);font-weight:700}.a11y-actions button:last-child{background:var(--blue);border-color:var(--blue);color:#fff}
 .ud-status{font-size:11px;color:var(--muted);min-height:15px;margin-top:8px}
+body.ud-contrast{--blue:#000;--ink:#000;--muted:#111;--border:#000;--bg:#fff;--teal:#004e59}
+body.ud-large{font-size:18px}
+body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
+@media(max-width:800px){.a11y-panel{right:-4px;width:min(350px,calc(100vw - 28px))}.ud{top:10px;right:10px}}
 
 /* Simplified plugin front page */
 .home-heading{margin-bottom:22px}
@@ -192,8 +174,6 @@ body.ud-line-spaced, body.ud-line-spaced * { line-height: var(--ud-line-height, 
 .result-card strong{display:block;color:var(--blue)}.result-card span{font-size:13px;color:var(--muted)}
 
 /* Better labels for readability mode */
-body.ud-readable .main{max-width:900px}
-body.ud-readable .main p,body.ud-readable .note-text,body.ud-readable .event-text{line-height:1.75}
 body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
 
 @media(max-width:800px){
@@ -210,11 +190,11 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     <button id="a11y-trigger" class="a11y-trigger" type="button" aria-expanded="false" aria-controls="a11y-panel">♿ Tilgængelighed</button>
     <div id="a11y-panel" class="a11y-panel hidden" role="dialog" aria-label="Tilgængelighedsindstillinger">
       <h2>Tilgængelighed</h2>
-      <p class="a11y-intro">Tilpas siden, så den er lettere at læse og bruge.</p>
+      <p class="a11y-intro">Tilpas siden, så den passer bedre til dig.</p>
 
       <div class="a11y-group">
         <label class="a11y-slider">
-          <span><strong>Tekststørrelse</strong><small>Gør al tekst større eller mindre.</small></span>
+          <span><strong>Tekststørrelse</strong><small>Gør teksten større eller mindre.</small></span>
           <input id="size" type="range" min="14" max="22" value="16" step="1" aria-label="Tekststørrelse">
         </label>
         <label class="a11y-slider">
@@ -225,15 +205,13 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
 
       <div class="a11y-group">
         <button class="a11y-option" id="read" type="button"><strong>🔊 Læs siden op</strong><small>Læs det synlige indhold højt.</small></button>
-        <button class="a11y-option" id="pause" type="button"><strong>⏸ Pause oplæsning</strong><small>Sæt oplæsningen på pause eller fortsæt.</small></button>
-        <button class="a11y-option" id="stop" type="button"><strong>⏹ Stop oplæsning</strong><small>Stop den aktuelle oplæsning.</small></button>
+        <button class="a11y-option hidden" id="pause" type="button"><strong>⏸ Pause oplæsning</strong><small>Pause eller fortsæt oplæsningen.</small></button>
+        <button class="a11y-option hidden" id="stop" type="button"><strong>⏹ Stop oplæsning</strong><small>Stop oplæsningen.</small></button>
       </div>
 
       <div class="a11y-group">
         <button class="a11y-option" id="contrast" type="button" aria-pressed="false"><strong>◐ Høj kontrast</strong><small>Øger kontrasten mellem tekst og baggrund.</small></button>
-        <button class="a11y-option" id="focus" type="button" aria-pressed="false"><strong>🎯 Fokus på indhold</strong><small>Fremhæver det vigtigste arbejdsområde.</small></button>
-        <button class="a11y-option" id="readable" type="button" aria-pressed="false"><strong>📖 Læsevenlig visning</strong><small>Giver teksten mere luft og en smallere læsebredde.</small></button>
-        <button class="a11y-option" id="motion" type="button" aria-pressed="false"><strong>✨ Reducer bevægelse</strong><small>Begrænser animationer og bevægelser.</small></button>
+        <button class="a11y-option" id="translate" type="button" aria-pressed="false"><strong>🌐 Oversæt</strong><small>Skift mellem dansk og engelsk.</small></button>
       </div>
 
       <div id="ud-status" class="ud-status" aria-live="polite">Standardvisning</div>
@@ -251,8 +229,8 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     <div class="inner">
       <div class="sd-logo">sundhed.dk</div>
       <nav class="public-nav">
-        <button class="active">Borger</button>
-        <button>Fagperson</button>
+        <button>Borger</button>
+        <button class="active">Fagperson</button>
         <button>Dine sundhedsdata</button>
       </nav>
       <button id="public-login" class="header-action">Log på</button>
@@ -263,7 +241,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     <section class="hero">
       <div class="hero-inner">
         <div class="kicker">Fagperson</div>
-        <h1>Én indgang til sundhedsvæsenets digitale løsninger</h1>
+        <h1>Sundhedsfaglige løsninger</h1>
         <p>Som sundhedsfaglig kan du få adgang til sundhed.dk's tjenester og relevante digitale løsninger. Log på for at fortsætte.</p>
         <div class="hero-actions">
           <button class="btn btn-red" id="hero-login">Log på som fagperson</button>
@@ -284,18 +262,35 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
   <header class="site-header">
     <div class="inner">
       <div class="sd-logo">sundhed.dk</div>
-      <div style="margin-left:auto;color:#536b7d;font-size:14px">Fagperson · Log på</div>
+      <nav class="public-nav">
+        <button>Borger</button>
+        <button class="active">Fagperson</button>
+        <button>Dine sundhedsdata</button>
+      </nav>
+      <div style="margin-left:auto;color:#536b7d;font-size:14px">Fagperson</div>
     </div>
   </header>
   <main class="login-shell">
     <section class="login-card">
       <h1>Log på som fagperson</h1>
-      <p>Log på for at få adgang til sundhed.dk's sundhedsfaglige tjenester.</p>
-      <div class="error hidden" id="login-error">Brugernavnet eller adgangskoden er forkert.</div>
-      <div class="field"><label for="username">Brugernavn</label><input id="username" autocomplete="off" placeholder="Brugernavn"></div>
-      <div class="field"><label for="password">Adgangskode</label><input id="password" type="password" placeholder="Adgangskode"></div>
-      <button class="btn btn-red" style="width:100%" id="login-btn">Log på</button>
-      <div class="demo">Prototype-login: <strong>test</strong> / <strong>1234</strong><br>Dette er en lokal simulation af loginflowet.</div>
+      <p>Vælg, hvordan du vil logge på sundhed.dk.</p>
+
+      <div class="login-choice">
+        <h2>Brugernavn og adgangskode</h2>
+        <div class="field"><label for="username">Brugernavn</label><input id="username" autocomplete="off" placeholder="Brugernavn"></div>
+        <div class="field"><label for="password">Adgangskode</label><input id="password" type="password" placeholder="Adgangskode"></div>
+        <div class="error hidden" id="login-error">Brugernavnet eller adgangskoden er forkert.</div>
+        <button class="btn btn-red" style="width:100%;margin-top:8px" id="login-btn">Log på</button>
+      </div>
+
+      <div class="login-divider"><span>eller</span></div>
+
+      <div class="login-choice login-choice-mitid">
+        <h2>MitID</h2>
+        <p>Log på med MitID via NEMLOG-IN.</p>
+        <button class="nemlogin-btn" id="mitid-btn"><span class="mitid-mark">MitID</span> Log på med MitID</button>
+      </div>
+      <p class="login-note">Prototype-login: Brugernavn <strong>test</strong> og adgangskode <strong>1234</strong>. MitID-knappen simulerer et godkendt login.</p>
     </section>
   </main>
 </div>
@@ -305,27 +300,27 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
   <header class="sds-header">
     <div class="inner">
       <div class="sds-brand">
-        <div class="sds-mark"><span></span><span></span><span></span><span></span></div>
-        Sundhedsdatastyrelsen
+        <div class="mitid-mark">MitID</div>
+        NEMLOG-IN
       </div>
-      <div class="sds-tag">Sikker adgang til sundheds-it</div>
+      <div class="sds-tag">Sikker loginløsning</div>
     </div>
   </header>
   <main class="auth-page">
     <section class="auth-box">
-      <h1>Bekræft din identitet</h1>
-      <p class="muted">Du er blevet viderestillet fra sundhed.dk til den centrale login-/brugerstyringsløsning.</p>
+      <h1>Log på med MitID</h1>
+      <p class="muted">Du er blevet sendt videre fra sundhed.dk til sikker login.</p>
       <div class="identity">
         <small>Valgt bruger</small>
         <strong>test</strong>
         <div style="font-size:13px;color:#61788a;margin-top:4px">Læge · Aalborg Universitetshospital · Intensiv</div>
       </div>
-      <p class="muted">I denne prototype er identiteten allerede verificeret.</p>
+      <p class="muted">I denne prototype er login allerede godkendt.</p>
       <div class="auth-buttons">
-        <button class="btn btn-red" id="auth-continue">Fortsæt til sundhed.dk</button>
+        <button class="btn btn-red" id="auth-continue">Fortsæt</button>
         <button class="btn btn-outline" id="auth-cancel">Annuller</button>
       </div>
-      <div class="demo">Prototype: I et rigtigt produkt ville dette trin håndteres af den relevante nationale login- og brugerstyringsinfrastruktur.</div>
+      <div class="demo">Prototype: Login er simuleret og sender dig direkte videre.</div>
     </section>
   </main>
 </div>
@@ -340,7 +335,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
       <div class="user-chip"><strong>test</strong>Læge · Aalborg UH · Intensiv</div>
     </div>
   </header>
-  <div class="breadcrumb"><div class="inner">Fagperson › Patientbehandling › Patientoverførsel</div></div>
+  <div class="breadcrumb"><div class="inner">Fagperson › Patientoverførsel</div></div>
 
   <main class="plugin-wrap">
     <div class="layout">
@@ -356,7 +351,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
         <div id="plugin-home">
           <div class="home-heading">
             <h1>Patientoverførsel</h1>
-            <p>Her kan du se nye overflytninger og finde en patient på CPR-nummer.</p>
+            <p>Her kan du se nye patientoverførsler og finde en overførsel på patientnummer.</p>
           </div>
 
           <section class="transfer-card" aria-labelledby="transfer-title">
@@ -370,7 +365,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
             </div>
             <div class="transfer-details">
               <div><small>Status</small><strong>Afventer modtagelse</strong></div>
-              <div><small>Planlagt</small><strong>02.10.2026 · 06:42</strong></div>
+              <div><small>Planlagt</small><strong>02.10.2026 · 10:30</strong></div>
             </div>
             <button class="btn btn-red" id="open-notification">Åbn patientoverførsel</button>
           </section>
@@ -393,11 +388,6 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
             <div class="label">Patient</div>
             <div class="patient-name">Anders Jensen</div>
             <div class="patient-cpr">CPR: 011026-0000</div>
-            <div class="patient-actions">
-              <button class="btn btn-teal" id="show-journal">Journalnotater</button>
-              <button class="btn btn-outline" id="show-timeline">Patientforløb</button>
-              <button class="btn btn-outline" id="show-transfer">Overflytning</button>
-            </div>
           </div>
           <div class="info-grid">
             <div class="info"><small>Nuværende hospital</small><strong>Aarhus Universitetshospital</strong></div>
@@ -405,7 +395,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
             <div class="info"><small>Overførselsstatus</small><span class="pill" id="transfer-pill">Afventer modtagelse</span></div>
           </div>
           <div class="tabs">
-            <button class="tab active" data-tab="journal">Journal</button>
+            <button class="tab active" data-tab="journal">Journalnotater</button>
             <button class="tab" data-tab="timeline">Forløb</button>
             <button class="tab" data-tab="transfer">Overflytning</button>
           </div>
@@ -418,7 +408,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
             <h2 style="margin:0 0 5px">Patientforløb</h2>
             <p class="lead">Kronologisk overblik over det aktuelle forløb.</p>
             <div class="timeline">
-              <div class="event"><div class="event-date">011026-0000 · 06:42</div><div class="event-title">Overflytning planlagt</div><div class="event-text">Patienten er registreret til overflytning fra Aarhus Universitetshospital til Aalborg Universitetshospital.</div></div>
+              <div class="event"><div class="event-date">02.10.2026 · 10:30</div><div class="event-title">Overflytning planlagt</div><div class="event-text">Patienten er registreret til overflytning fra Aarhus Universitetshospital til Aalborg Universitetshospital.</div></div>
               <div class="event"><div class="event-date">30.09.2026 · 22:15</div><div class="event-title">Indlagt på intensiv</div><div class="event-text">Patienten er modtaget på Aarhus Universitetshospital, Intensiv.</div></div>
               <div class="event"><div class="event-date">30.09.2026 · 18:30</div><div class="event-title">Akut vurdering</div><div class="event-text">Patienten er vurderet med behov for intensiv monitorering.</div></div>
             </div>
@@ -456,10 +446,14 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
   $("hero-login").onclick=()=>show("login-screen");
   $("login-btn").onclick=()=>{
     if($("username").value.trim()==="test" && $("password").value==="1234"){
-      $("login-error").classList.add("hidden"); show("auth-screen");
-    }else $("login-error").classList.remove("hidden");
+      $("login-error").classList.add("hidden");
+      show("plugin-screen");
+    }else{
+      $("login-error").classList.remove("hidden");
+    }
   };
   $("password").addEventListener("keydown",e=>{if(e.key==="Enter")$("login-btn").click()});
+  $("mitid-btn").onclick=()=>show("auth-screen");
   $("auth-continue").onclick=()=>show("plugin-screen");
   $("auth-cancel").onclick=()=>show("login-screen");
 
@@ -500,15 +494,22 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     });
   }
   document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>activateTab(b.dataset.tab));
-  $("show-journal").onclick=()=>activateTab("journal");
-  $("show-timeline").onclick=()=>activateTab("timeline");
-  $("show-transfer").onclick=()=>activateTab("transfer");
-
   $("notes").innerHTML=`
-    <article class="note"><div class="note-top"><span class="note-title">Aktuelt forløb</span><span class="note-date">011026-0000 · 06:42</span></div><div class="source">Intensivjournal · Aarhus Universitetshospital</div><p class="note-text">Patienten er stabiliseret og planlagt til overflytning til Aalborg Universitetshospital. Modtagende afdeling er Aalborg Universitetshospital, Intensiv.</p><span class="tag">Overflytning</span></article>
-    <article class="note"><div class="note-top"><span class="note-title">Intensiv vurdering</span><span class="note-date">30.09.2026 · 22:15</span></div><div class="source">Lægenotat · Aarhus Universitetshospital</div><p class="note-text">Fortsat behov for tæt monitorering. Behandlingsplan og relevante oplysninger er gjort klar til den modtagende afdeling.</p></article>
-    <article class="note"><div class="note-top"><span class="note-title">Observation</span><span class="note-date">30.09.2026 · 18:30</span></div><div class="source">Sygeplejenotat · Aarhus Universitetshospital</div><p class="note-text">Patienten observeres kontinuerligt. Der er dokumenteret løbende status og behandling.</p></article>
-    <article class="note"><div class="note-top"><span class="note-title">Akut vurdering</span><span class="note-date">30.09.2026 · 17:55</span></div><div class="source">Akut vurdering · Aarhus Universitetshospital</div><p class="note-text">Patienten er vurderet med behov for intensiv monitorering og videre behandling på intensiv afdeling.</p></article>`;
+    <article class="note clickable" tabindex="0" role="button" aria-expanded="false"><div class="note-top"><span class="note-title">Aktuelt forløb</span><span class="note-action">Vis notat</span></div><div class="note-date">02.10.2026 · 10:30</div><div class="source">Intensivjournal · Aarhus Universitetshospital</div><p class="note-text">Patienten er stabiliseret og planlagt til overflytning til Aalborg Universitetshospital.</p><div class="note-detail">Modtagende afdeling er Aalborg Universitetshospital, Intensiv. Notatet beskriver den aktuelle status og planlagte overflytning.</div><span class="tag">Overflytning</span></article>
+    <article class="note clickable" tabindex="0" role="button" aria-expanded="false"><div class="note-top"><span class="note-title">Intensiv vurdering</span><span class="note-action">Vis notat</span></div><div class="note-date">30.09.2026 · 22:15</div><div class="source">Lægenotat · Aarhus Universitetshospital</div><p class="note-text">Fortsat behov for tæt monitorering.</p><div class="note-detail">Behandlingsplan og relevante oplysninger er gjort klar til den modtagende afdeling.</div></article>
+    <article class="note clickable" tabindex="0" role="button" aria-expanded="false"><div class="note-top"><span class="note-title">Observation</span><span class="note-action">Vis notat</span></div><div class="note-date">30.09.2026 · 18:30</div><div class="source">Sygeplejenotat · Aarhus Universitetshospital</div><p class="note-text">Patienten observeres kontinuerligt.</p><div class="note-detail">Der er dokumenteret løbende status og behandling.</div></article>
+    <article class="note clickable" tabindex="0" role="button" aria-expanded="false"><div class="note-top"><span class="note-title">Akut vurdering</span><span class="note-action">Vis notat</span></div><div class="note-date">30.09.2026 · 17:55</div><div class="source">Akut vurdering · Aarhus Universitetshospital</div><p class="note-text">Patienten er vurderet med behov for intensiv monitorering.</p><div class="note-detail">Der er behov for videre behandling på intensiv afdeling.</div></article>`;
+
+  function toggleNote(note){
+    const open=note.classList.toggle("open");
+    note.setAttribute("aria-expanded",String(open));
+    const action=note.querySelector(".note-action");
+    if(action) action.textContent=english?(open?"Hide note":"Show note"):(open?"Skjul notat":"Vis notat");
+  }
+  document.querySelectorAll(".note.clickable").forEach(note=>{
+    note.addEventListener("click",()=>toggleNote(note));
+    note.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();toggleNote(note)}});
+  });
 
   $("transfer-box").innerHTML=`
     <div class="info-grid">
@@ -550,10 +551,20 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
   document.addEventListener("click",e=>{if(!panel.contains(e.target)&&e.target!==trigger)closeA11y()});
   document.addEventListener("keydown",e=>{if(e.key==="Escape")closeA11y()});
 
-  // Text scaling: only app screens scale. The accessibility button/menu never moves.
   function applyTextScale(v){
     const scale=v/16;
-    appScreens.forEach(id=>{if($(id))$(id).style.zoom=scale});
+    appScreens.forEach(id=>{
+      const root=$(id);
+      if(!root)return;
+      root.querySelectorAll("*").forEach(el=>{
+        if(el.closest("#ud-toolbar"))return;
+        if(!el.dataset.baseFontSize){
+          el.dataset.baseFontSize=getComputedStyle(el).fontSize;
+        }
+        const base=parseFloat(el.dataset.baseFontSize);
+        if(Number.isFinite(base)) el.style.fontSize=(base*scale)+"px";
+      });
+    });
   }
   $("size").oninput=e=>{
     applyTextScale(Number(e.target.value));
@@ -565,13 +576,138 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     $("ud-status").textContent="Linjeafstand: "+e.target.value;
   };
 
-  [["contrast","ud-contrast","Høj kontrast"],["focus","ud-focus","Fokus på indhold"],["readable","ud-readable","Læsevenlig visning"],["motion","ud-reduced","Reducer bevægelse"]].forEach(([id,cls,label])=>{
-    $(id).onclick=()=>{
-      const on=body.classList.toggle(cls);
-      $(id).setAttribute("aria-pressed",String(on));
-      $("ud-status").textContent=on?label+" aktiveret":label+" deaktiveret";
-    };
-  });
+  $("contrast").onclick=()=>{
+    const on=body.classList.toggle("ud-contrast");
+    $("contrast").setAttribute("aria-pressed",String(on));
+    $("ud-status").textContent=on?"Høj kontrast aktiveret":"Høj kontrast deaktiveret";
+  };
+
+  const translations={
+    "Borger":"Citizen",
+    "Fagperson":"Healthcare professional",
+    "Dine sundhedsdata":"Your health data",
+    "Log på":"Log in",
+    "Log på som fagperson":"Log in as a healthcare professional",
+    "Læs mere om fagperson":"Learn more about healthcare professionals",
+    "Én indgang til sundhedsvæsenets digitale løsninger":"One access point to the healthcare system's digital services",
+    "Som sundhedsfaglig kan du få adgang til sundhed.dk's tjenester og relevante digitale løsninger. Log på for at fortsætte.":"As a healthcare professional, you can access sundhed.dk services and relevant digital solutions. Log in to continue.",
+    "Sundhedsjournalen":"Health record",
+    "Patientbehandling":"Patient care",
+    "Digitale tjenester":"Digital services",
+    "Adgang til relevante sundhedsoplysninger på tværs af sundhedsvæsenet.":"Access to relevant health information across the healthcare system.",
+    "Genveje til faglige værktøjer og digitale løsninger.":"Shortcuts to professional tools and digital solutions.",
+    "Samlet adgang til løsninger, der understøtter arbejdet med patienterne.":"Access to solutions that support work with patients.",
+    "Log på som fagperson":"Log in as a healthcare professional",
+    "Brugernavn":"Username",
+    "Adgangskode":"Password",
+    "Log på":"Log in",
+    "Log på med MitID":"Log in with MitID",
+    "Eller log på med brugernavn og adgangskode":"Or log in with username and password",
+    "Fagperson · Log på":"Healthcare professional · Log in",
+    "Bekræft din identitet":"Confirm your identity",
+    "Fortsæt til sundhed.dk":"Continue to sundhed.dk",
+    "Annuller":"Cancel",
+    "Valgt bruger":"Selected user",
+    "Patientoverførsel":"Patient transfer",
+    "Fagperson › Patientoverførsel":"Healthcare professional › Patient transfer",
+    "MIN AFDELING":"MY DEPARTMENT",
+    "Intensiv":"Intensive care",
+    "Meddelelser":"Messages",
+    "Patientoverførsel":"Patient transfer",
+    "Her kan du se nye overflytninger og finde en patientoverførsel på patientnummer.":"Here you can see new patient transfers and find a transfer by patient number.",
+    "Ny patientoverførsel · 1":"New patient transfer · 1",
+    "Anders Jensen":"Anders Jensen",
+    "CPR-nummer":"CPR number",
+    "Aarhus Universitetshospital · Intensiv":"Aarhus University Hospital · Intensive care",
+    "Aalborg Universitetshospital · Intensiv":"Aalborg University Hospital · Intensive care",
+    "Afventer modtagelse":"Awaiting receipt",
+    "Planlagt":"Scheduled",
+    "Åbn patientoverførsel":"Open patient transfer",
+    "Find patientoverførsel":"Find patient transfer",
+    "Indtast nummeret på den patientoverførsel, du vil åbne.":"Enter the number of the patient transfer you want to open.",
+    "Indtast patientnummer":"Enter patient number",
+    "Søg":"Search",
+    "Patientoverførsel fundet:":"Patient transfer found:",
+    "Patientoverførsel nr. 1 · Anders Jensen":"Patient transfer no. 1 · Anders Jensen",
+    "Ingen patientoverførsel fundet. Prøv patientnummer 1.":"No patient transfer found. Try patient number 1.",
+    "Patient":"Patient",
+    "Journalnotater":"Journal notes",
+    "Forløb":"Course",
+    "Overflytning":"Transfer",
+    "Nuværende hospital":"Current hospital",
+    "Nuværende afdeling":"Current department",
+    "Overførselsstatus":"Transfer status",
+    "Relevante journalnotater fra patientens aktuelle intensivforløb.":"Relevant journal notes from the patient's current intensive care course.",
+    "Patientforløb":"Patient course",
+    "Kronologisk overblik over det aktuelle forløb.":"Chronological overview of the current course.",
+    "Oplysninger om den planlagte overflytning.":"Information about the planned transfer.",
+    "Afsendende afdeling":"Sending department",
+    "Modtagende afdeling":"Receiving department",
+    "Status":"Status",
+    "Bekræft modtagelse":"Confirm receipt",
+    "Modtagelse bekræftet":"Receipt confirmed",
+    "Aktuelt forløb":"Current course",
+    "Intensiv vurdering":"Intensive care assessment",
+    "Observation":"Observation",
+    "Akut vurdering":"Acute assessment",
+    "Intensivjournal · Aarhus Universitetshospital":"Intensive care record · Aarhus University Hospital",
+    "Lægenotat · Aarhus Universitetshospital":"Doctor's note · Aarhus University Hospital",
+    "Sygeplejenotat · Aarhus Universitetshospital":"Nursing note · Aarhus University Hospital",
+    "Patienten er stabiliseret og planlagt til overflytning til Aalborg Universitetshospital.":"The patient has been stabilised and is scheduled for transfer to Aalborg University Hospital.",
+    "Modtagende afdeling er Aalborg Universitetshospital, Intensiv. Notatet beskriver den aktuelle status og planlagte overflytning.":"The receiving department is Aalborg University Hospital, Intensive Care. The note describes the current status and planned transfer.",
+    "Fortsat behov for tæt monitorering.":"Continued need for close monitoring.",
+    "Behandlingsplan og relevante oplysninger er gjort klar til den modtagende afdeling.":"The treatment plan and relevant information have been prepared for the receiving department.",
+    "Patienten observeres kontinuerligt.":"The patient is being continuously observed.",
+    "Der er dokumenteret løbende status og behandling.":"Ongoing status and treatment have been documented.",
+    "Patienten er vurderet med behov for intensiv monitorering.":"The patient has been assessed as requiring intensive monitoring.",
+    "Der er behov for videre behandling på intensiv afdeling.":"Further treatment in the intensive care department is required.",
+    "Vis notat":"Show note",
+    "Skjul notat":"Hide note",
+    "Tilgængelighed":"Accessibility",
+    "Tilpas siden, så den passer bedre til dig.":"Adjust the page to suit your needs.",
+    "Tekststørrelse":"Text size",
+    "Gør teksten større eller mindre.":"Make the text larger or smaller.",
+    "Linjeafstand":"Line spacing",
+    "Giver mere luft mellem tekstlinjerne.":"Adds more space between lines of text.",
+    "Læs siden op":"Read aloud",
+    "Læs det synlige indhold højt.":"Read the visible content aloud.",
+    "Pause oplæsning":"Pause reading",
+    "Pause eller fortsæt oplæsningen.":"Pause or resume reading.",
+    "Stop oplæsningen.":"Stop reading.",
+    "Stop oplæsning":"Stop reading",
+    "Høj kontrast":"High contrast",
+    "Øger kontrasten mellem tekst og baggrund.":"Increases the contrast between text and background.",
+    "Oversæt":"Translate",
+    "Skift mellem dansk og engelsk.":"Switch between Danish and English.",
+    "Nulstil":"Reset",
+    "Luk":"Close"
+  };
+  let english=false;
+  function translateTree(toEnglish){
+    const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+    const nodes=[];
+    while(walker.nextNode())nodes.push(walker.currentNode);
+    nodes.forEach(node=>{
+      const key=node.nodeValue.trim();
+      if(!key)return;
+      if(toEnglish && translations[key]) node.nodeValue=node.nodeValue.replace(key,translations[key]);
+      else if(!toEnglish){
+        const original=Object.keys(translations).find(k=>translations[k]===key);
+        if(original) node.nodeValue=node.nodeValue.replace(key,original);
+      }
+    });
+    document.querySelectorAll("input[placeholder]").forEach(input=>{
+      if(toEnglish && input.placeholder==="Indtast patientnummer")input.placeholder="Enter patient number";
+      else if(!toEnglish && input.placeholder==="Enter patient number")input.placeholder="Indtast patientnummer";
+    });
+    document.documentElement.lang=toEnglish?"en":"da";
+  }
+  $("translate").onclick=()=>{
+    english=!english;
+    translateTree(english);
+    $("translate").setAttribute("aria-pressed",String(english));
+    $("ud-status").textContent=english?"English enabled":"Dansk aktiveret";
+  };
 
   function speechText(){
     const roots=[...document.body.children].filter(el=>{
@@ -584,33 +720,44 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     wrap.querySelectorAll("script,style,button,input,select,textarea,[aria-hidden='true'],[hidden]").forEach(x=>x.remove());
     return (wrap.innerText||"").replace(/\s+/g," ").trim();
   }
+  function setReadingControls(active){
+    $("read").classList.toggle("hidden",active);
+    $("pause").classList.toggle("hidden",!active);
+    $("stop").classList.toggle("hidden",!active);
+  }
   $("read").onclick=()=>{
     if(!("speechSynthesis"in window)){ $("ud-status").textContent="Oplæsning understøttes ikke i denne browser.";return }
     speechSynthesis.cancel();
     const u=new SpeechSynthesisUtterance(speechText());
-    u.lang="da-DK";u.rate=.9;
-    u.onstart=()=>$("ud-status").textContent="Oplæsning i gang";
-    u.onend=()=>$("ud-status").textContent="Oplæsning færdig";
+    u.lang=english?"en-US":"da-DK";u.rate=.9;
+    u.onstart=()=>{setReadingControls(true);$("ud-status").textContent=english?"Reading aloud":"Oplæsning i gang"};
+    u.onend=()=>{setReadingControls(false);$("ud-status").textContent=english?"Reading finished":"Oplæsning færdig"};
     speechSynthesis.speak(u);
   };
   $("pause").onclick=()=>{
     if(!("speechSynthesis"in window))return;
-    if(speechSynthesis.speaking&&!speechSynthesis.paused){speechSynthesis.pause();$("ud-status").textContent="Oplæsning på pause"}
-    else if(speechSynthesis.paused){speechSynthesis.resume();$("ud-status").textContent="Oplæsning fortsat"}
-    else $("read").click();
+    if(speechSynthesis.speaking&&!speechSynthesis.paused){speechSynthesis.pause();$("ud-status").textContent=english?"Reading paused":"Oplæsning på pause"}
+    else if(speechSynthesis.paused){speechSynthesis.resume();$("ud-status").textContent=english?"Reading resumed":"Oplæsning fortsat"}
   };
   $("stop").onclick=()=>{
     if("speechSynthesis"in window)speechSynthesis.cancel();
-    $("ud-status").textContent="Oplæsning stoppet";
+    setReadingControls(false);
+    $("ud-status").textContent=english?"Reading stopped":"Oplæsning stoppet";
   };
 
   $("reset").onclick=()=>{
     if("speechSynthesis"in window)speechSynthesis.cancel();
-    ["ud-contrast","ud-focus","ud-readable","ud-reduced","ud-line-spaced"].forEach(c=>body.classList.remove(c));
-    appScreens.forEach(id=>{if($(id))$(id).style.zoom=""});
+    ["ud-contrast","ud-line-spaced"].forEach(c=>body.classList.remove(c));
+    appScreens.forEach(id=>{
+      const root=$(id);
+      if(!root)return;
+      root.querySelectorAll("*").forEach(el=>{el.style.fontSize="";delete el.dataset.baseFontSize});
+    });
     body.style.removeProperty("--ud-line-height");
     $("size").value=16;$("line").value=1.5;
-    ["contrast","focus","readable","motion"].forEach(id=>$(id).setAttribute("aria-pressed","false"));
+    ["contrast","translate"].forEach(id=>$(id).setAttribute("aria-pressed","false"));
+    if(english)translateTree(false);
+    english=false;document.documentElement.lang="da";setReadingControls(false);
     $("ud-status").textContent="Indstillinger nulstillet";
   };
 
