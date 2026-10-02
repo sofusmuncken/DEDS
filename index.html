@@ -29,17 +29,6 @@ a{color:inherit}
 .header-action:hover{background:#fff4f5}
 .menu-btn{border:0;background:transparent;color:var(--blue);font-weight:700}
 
-/* Accessibility toolbar */
-.ud{background:var(--blue);color:#fff}
-.ud-inner{width:min(1180px,calc(100% - 40px));margin:auto;min-height:50px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.ud-label{font-size:12px;font-weight:700;margin-right:5px}
-.ud button,.ud label{font-size:12px}
-.ud button{background:#fff;color:var(--blue);border:1px solid #fff;padding:7px 9px;border-radius:2px}
-.ud button[aria-pressed=true]{background:#b9e0e6}
-.ud .range{display:flex;align-items:center;gap:5px}
-.ud input[type=range]{width:90px;accent-color:#fff}
-.ud-status{font-size:11px;color:#dcecf0;margin-left:auto}
-
 /* Public landing */
 .hero{background:#fff}
 .hero-inner{width:min(1180px,calc(100% - 40px));margin:auto;padding:58px 0 62px}
@@ -66,7 +55,6 @@ a{color:inherit}
 .nemlogin-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:12px;border:0;border-radius:3px;background:#17324d;color:#fff;padding:14px 18px;font-weight:700;font-size:16px}
 .nemlogin-btn:hover{background:#10283d}
 .mitid-mark{background:#fff;color:#17324d;border-radius:3px;padding:4px 7px;font-weight:800;font-size:13px;letter-spacing:.02em}
-.login-help{display:block;margin-top:18px;color:var(--teal);font-size:14px;font-weight:700;text-decoration:none}
 .login-note{font-size:12px!important;color:#708696!important;margin-top:20px!important;margin-bottom:0!important}
 .login-divider{display:flex;align-items:center;gap:12px;margin:22px 0;color:var(--muted);font-size:13px}.login-divider:before,.login-divider:after{content:"";height:1px;background:var(--border);flex:1}.login-divider span{white-space:nowrap}.login-choice-mitid{padding-top:0;border-top:0}.login-card .field{margin:16px 0}.login-card .field label{font-size:14px}.login-card .field input{padding:12px}
 
@@ -75,8 +63,6 @@ a{color:inherit}
 .sds-header{background:#fff;border-bottom:1px solid var(--border)}
 .sds-header .inner{width:min(1100px,calc(100% - 40px));height:82px;margin:auto;display:flex;align-items:center;justify-content:space-between}
 .sds-brand{display:flex;align-items:center;gap:13px;font-weight:700;color:var(--blue);font-size:19px}
-.sds-mark{width:42px;height:42px;border:2px solid var(--blue);display:grid;grid-template-columns:repeat(2,1fr);gap:3px;padding:5px}
-.sds-mark span{background:var(--blue)}
 .sds-tag{font-size:13px;color:var(--muted)}
 .auth-box{width:min(520px,100%);margin:45px auto;background:#fff;border:1px solid var(--border);padding:34px}
 .auth-box h1{margin:0 0 8px;color:var(--blue);font-size:28px}.auth-box .muted{color:var(--muted);line-height:1.5}
@@ -89,7 +75,6 @@ a{color:inherit}
 .plugin-header .inner{width:min(1180px,calc(100% - 40px));height:70px;margin:auto;display:flex;align-items:center;gap:30px}
 .plugin-brand{font-weight:700;color:var(--teal);font-size:18px;border-left:4px solid var(--teal);padding-left:12px}
 .plugin-nav{display:flex;flex:1;height:100%}
-.plugin-nav span{display:none}
 .user-chip{font-size:12px;text-align:right}.user-chip strong{display:block}
 .breadcrumb{background:#eef2f4;border-bottom:1px solid var(--border);font-size:13px;color:var(--muted)}
 .breadcrumb .inner{width:min(1180px,calc(100% - 40px));margin:auto;padding:10px 0}
@@ -100,18 +85,11 @@ a{color:inherit}
 .side{width:100%;border:0;background:transparent;text-align:left;padding:11px 10px;color:#304b61;border-radius:2px;font-size:14px}
 .side.active{background:#e6f1f3;color:#006d7e;border-left:3px solid var(--teal);padding-left:7px;font-weight:700}
 .side:hover{background:#f0f5f6}
-.sidebar hr{border:0;border-top:1px solid var(--border);margin:21px 0}
 .main h1{font-size:30px;margin:0 0 7px;color:var(--blue)}
 .lead{color:var(--muted);font-size:15px;line-height:1.55;margin:0 0 22px}
-.notice{background:#fff;border:1px solid #c8d9df;padding:18px 20px;display:flex;gap:14px;margin-bottom:24px}
-.notice-icon{width:38px;height:38px;border-radius:50%;background:#dff0f2;color:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;flex:none}
-.notice strong{display:block}.notice p{margin:4px 0 0;color:#506a7d;font-size:14px;line-height:1.5}
-.notice button{margin-top:10px;border:0;background:none;color:var(--teal);font-weight:700;padding:0}
 .panel{background:#fff;border:1px solid var(--border);padding:22px;margin-bottom:20px}
 .panel-title{font-weight:700;font-size:18px;margin-bottom:5px}.panel-sub{font-size:14px;color:var(--muted);margin-bottom:17px}
-.search{display:flex;gap:10px}.search input{flex:1;padding:13px;border:1px solid #9baeb9}.status{font-size:13px;color:var(--muted);margin-top:10px;min-height:18px}
-.result{width:100%;border:1px solid var(--border);background:#fff;padding:17px;display:flex;justify-content:space-between;text-align:left;margin-top:10px}
-.result:hover{border-color:var(--teal);background:#fbfdfd}.result-name{font-weight:700;font-size:17px}.result-meta{font-size:13px;color:var(--muted);margin-top:4px}.arrow{color:var(--teal);font-weight:700}
+.status{font-size:13px;color:var(--muted);margin-top:10px;min-height:18px}
 .patient-head{background:#fff;border:1px solid var(--border);padding:22px}.label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .patient-name{font-size:26px;font-weight:700;margin:3px 0}.patient-cpr{color:var(--muted);font-size:14px}
 .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0 24px}
@@ -121,42 +99,19 @@ a{color:inherit}
 .note{background:#fff;border:1px solid var(--border);padding:18px;margin:0 0 12px}.note.clickable{cursor:pointer;transition:border-color .15s,background .15s}.note.clickable:hover{border-color:var(--teal);background:#fbfdfd}.note.clickable:focus-visible{outline:3px solid #8fd0d8;outline-offset:2px}.note-top{display:flex;justify-content:space-between;gap:15px}.note-title{font-weight:700}.note-date{font-size:13px;color:var(--muted)}.note-action{color:var(--teal);font-size:13px;font-weight:700;white-space:nowrap}.source{font-size:13px;color:var(--teal);margin:6px 0 10px}.note-text{font-size:14px;line-height:1.65;color:#354f61;margin:0}.note-detail{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);color:#354f61;font-size:14px;line-height:1.6}.note.open .note-detail{display:block}.tag{display:inline-block;background:#edf3f5;color:#536b7c;font-size:12px;padding:4px 8px;margin-top:11px}
 .timeline{background:#fff;border:1px solid var(--border);padding:24px 24px 10px;border-left:3px solid var(--teal)}
 .event{margin:0 0 25px}.event-date{font-size:12px;color:var(--muted)}.event-title{font-weight:700;margin-top:3px}.event-text{font-size:14px;color:#536b7c;line-height:1.5;margin-top:4px}
-.transfer-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.transfer-card{background:#fff;border:1px solid var(--border);padding:18px}.transfer-card small{display:block;color:var(--muted);margin-bottom:5px}
+.transfer-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .success{background:var(--success-bg);border:1px solid #acd1ba;color:#285e42;padding:19px}.success strong{display:block;margin-bottom:5px}
 .placeholder{background:#fff;border:1px solid var(--border);padding:28px;color:var(--muted)}
-
-/* Accessibility */
-.ud{position:fixed;top:16px;right:18px;z-index:2000}
-.ud-inner{position:relative}
-.a11y-trigger{background:#fff;color:var(--blue);border:1px solid #b9c5cc;border-radius:3px;padding:9px 13px;font-size:13px;font-weight:700;box-shadow:0 3px 10px rgba(0,0,0,.12)}
-.a11y-trigger:hover{background:#f7f9fa}
-.a11y-panel{position:absolute;right:0;top:48px;width:350px;background:#fff;color:var(--ink);border:1px solid var(--border);border-radius:4px;box-shadow:0 12px 30px rgba(0,0,0,.18);padding:18px;z-index:2001}
-.a11y-panel h2{margin:0 0 4px;color:var(--blue);font-size:19px}
-.a11y-intro{margin:0 0 12px;color:var(--muted);font-size:13px;line-height:1.45}
-.a11y-group{border-top:1px solid var(--border);padding-top:11px;margin-top:11px}
-.a11y-slider{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:9px 0}
-.a11y-slider span{min-width:0}.a11y-slider strong{display:block;font-size:13px}.a11y-slider small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
-.a11y-slider input{width:130px;flex:none}
-.a11y-option{width:100%;text-align:left;background:#f7f9fa;color:var(--ink);border:1px solid var(--border);border-radius:3px;padding:9px 10px;margin:4px 0}
-.a11y-option:hover{background:#edf4f6}
-.a11y-option[aria-pressed=true]{border-color:var(--teal);background:#e9f4f5}
-.a11y-option strong{display:block;font-size:13px}.a11y-option small{display:block;color:var(--muted);font-size:11px;line-height:1.3;margin-top:2px}
-.a11y-actions{display:flex;gap:8px;margin-top:12px}.a11y-actions button{flex:1;padding:8px;border-radius:3px;border:1px solid var(--border);background:#fff;color:var(--blue);font-weight:700}.a11y-actions button:last-child{background:var(--blue);border-color:var(--blue);color:#fff}
-.ud-status{font-size:11px;color:var(--muted);min-height:15px;margin-top:8px}
-body.ud-contrast{--blue:#000;--ink:#000;--muted:#111;--border:#000;--bg:#fff;--teal:#004e59}
-body.ud-large{font-size:18px}
-body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
-@media(max-width:800px){.a11y-panel{right:-4px;width:min(350px,calc(100vw - 28px))}.ud{top:10px;right:10px}}
 
 /* Simplified plugin front page */
 .home-heading{margin-bottom:22px}
 .home-heading h1{font-size:31px;margin:0 0 7px;color:var(--blue)}
 .home-heading p{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
 .transfer-card{background:#fff;border:1px solid var(--border);border-left:5px solid var(--red);padding:22px 24px;margin-bottom:17px}
+.transfer-card small{display:block;color:var(--muted);margin-bottom:5px}
 .transfer-eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--red);font-weight:700;margin-bottom:8px}
 .front-cpr{font-size:13px;color:var(--muted);margin:-2px 0 12px}
 .front-cpr strong{color:var(--blue);font-weight:700;margin-left:4px;letter-spacing:.03em}
-
 .transfer-card h2{font-size:25px;color:var(--blue);margin:0 0 7px}
 .transfer-route{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:14px;margin-bottom:17px}
 .transfer-route span{font-size:20px;color:var(--teal)}
@@ -173,11 +128,46 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
 .result-card:hover{border-color:var(--teal);background:#f8fbfc}
 .result-card strong{display:block;color:var(--blue)}.result-card span{font-size:13px;color:var(--muted)}
 
-/* Better labels for readability mode */
+/* ===== Tilgængelighed (Universal design) ===== */
+.ud{position:fixed;bottom:20px;right:20px;z-index:2000;background:transparent}
+.ud .ud-inner{position:relative}
+
+.ud .a11y-trigger{
+  display:inline-flex;align-items:center;gap:9px;
+  height:44px;padding:0 18px 0 14px;
+  background:#fff;color:var(--blue);
+  border:1px solid var(--border);border-radius:999px;
+  font-size:14px;font-weight:700;letter-spacing:.01em;
+  box-shadow:0 4px 14px rgba(23,50,77,.14);
+  transition:background .15s,border-color .15s,box-shadow .15s,transform .15s;
+}
+.ud .a11y-trigger .a11y-icon{color:var(--teal);flex:none}
+.ud .a11y-trigger:hover{background:#f3f9fa;border-color:var(--teal);box-shadow:0 6px 18px rgba(23,50,77,.18)}
+.ud .a11y-trigger:active{transform:translateY(1px)}
+.ud .a11y-trigger:focus-visible{outline:3px solid #8fd0d8;outline-offset:2px}
+.ud .a11y-trigger[aria-expanded="true"]{background:var(--blue);color:#fff;border-color:var(--blue)}
+.ud .a11y-trigger[aria-expanded="true"] .a11y-icon{color:#fff}
+
+.a11y-panel{position:absolute;right:0;bottom:56px;top:auto;width:350px;background:#fff;color:var(--ink);border:1px solid var(--border);border-radius:8px;box-shadow:0 12px 30px rgba(0,0,0,.18);padding:18px;z-index:2001;max-height:calc(100vh - 100px);overflow-y:auto}
+.a11y-panel h2{margin:0 0 4px;color:var(--blue);font-size:19px}
+.a11y-intro{margin:0 0 12px;color:var(--muted);font-size:13px;line-height:1.45}
+.a11y-group{border-top:1px solid var(--border);padding-top:11px;margin-top:11px}
+.a11y-slider{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:9px 0}
+.a11y-slider span{min-width:0}.a11y-slider strong{display:block;font-size:13px}.a11y-slider small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+.a11y-slider input{width:130px;flex:none}
+.a11y-option{width:100%;text-align:left;background:#f7f9fa;color:var(--ink);border:1px solid var(--border);border-radius:3px;padding:9px 10px;margin:4px 0}
+.a11y-option:hover{background:#edf4f6}
+.a11y-option[aria-pressed=true]{border-color:var(--teal);background:#e9f4f5}
+.a11y-option strong{display:block;font-size:13px}.a11y-option small{display:block;color:var(--muted);font-size:11px;line-height:1.3;margin-top:2px}
+.a11y-actions{display:flex;gap:8px;margin-top:12px}.a11y-actions button{flex:1;padding:8px;border-radius:3px;border:1px solid var(--border);background:#fff;color:var(--blue);font-weight:700}.a11y-actions button:last-child{background:var(--blue);border-color:var(--blue);color:#fff}
+.ud-status{font-size:11px;color:var(--muted);min-height:15px;margin-top:8px}
+body.ud-contrast{--blue:#000;--ink:#000;--muted:#111;--border:#000;--bg:#fff;--teal:#004e59}
+body.ud-large{font-size:18px}
 body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
 
 @media(max-width:800px){
-  .a11y-panel{right:0;width:min(380px,calc(100vw - 28px))}
+  .ud{bottom:14px;right:14px}
+  .a11y-panel{width:min(350px,calc(100vw - 28px))}
   .transfer-details{grid-template-columns:1fr}
 }
 </style>
@@ -187,7 +177,14 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
 <!-- UNIVERSAL DESIGN -->
 <div id="ud-toolbar" class="ud" aria-label="Tilgængelighed">
   <div class="ud-inner">
-    <button id="a11y-trigger" class="a11y-trigger" type="button" aria-expanded="false" aria-controls="a11y-panel">♿ Tilgængelighed</button>
+    <button id="a11y-trigger" class="a11y-trigger" type="button" aria-expanded="false" aria-controls="a11y-panel">
+      <svg class="a11y-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <circle cx="12" cy="7.2" r="1.2" fill="currentColor" stroke="none"/>
+        <path d="M7 10l5 1 5-1M12 11v3.5M12 14.5l-2.5 3.5M12 14.5l2.5 3.5"/>
+      </svg>
+      <span>Tilgængelighed</span>
+    </button>
     <div id="a11y-panel" class="a11y-panel hidden" role="dialog" aria-label="Tilgængelighedsindstillinger">
       <h2>Tilgængelighed</h2>
       <p class="a11y-intro">Tilpas siden, så den passer bedre til dig.</p>
@@ -557,7 +554,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     trigger.setAttribute("aria-expanded",String(open));
   };
   $("a11y-close").onclick=closeA11y;
-  document.addEventListener("click",e=>{if(!panel.contains(e.target)&&e.target!==trigger)closeA11y()});
+  document.addEventListener("click",e=>{if(!panel.contains(e.target)&&!trigger.contains(e.target))closeA11y()});
   document.addEventListener("keydown",e=>{if(e.key==="Escape")closeA11y()});
 
   function applyTextScale(v){
@@ -598,7 +595,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     "Log på":"Log in",
     "Log på som fagperson":"Log in as a healthcare professional",
     "Læs mere om fagperson":"Learn more about healthcare professionals",
-    "Én indgang til sundhedsvæsenets digitale løsninger":"One access point to the healthcare system's digital services",
+    "Sundhedsfaglige løsninger":"Healthcare solutions",
     "Som sundhedsfaglig kan du få adgang til sundhed.dk's tjenester og relevante digitale løsninger. Log på for at fortsætte.":"As a healthcare professional, you can access sundhed.dk services and relevant digital solutions. Log in to continue.",
     "Sundhedsjournalen":"Health record",
     "Patientbehandling":"Patient care",
@@ -606,26 +603,19 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     "Adgang til relevante sundhedsoplysninger på tværs af sundhedsvæsenet.":"Access to relevant health information across the healthcare system.",
     "Genveje til faglige værktøjer og digitale løsninger.":"Shortcuts to professional tools and digital solutions.",
     "Samlet adgang til løsninger, der understøtter arbejdet med patienterne.":"Access to solutions that support work with patients.",
-    "Log på som fagperson":"Log in as a healthcare professional",
     "Brugernavn":"Username",
     "Adgangskode":"Password",
-    "Log på":"Log in",
     "Log på med MitID":"Log in with MitID",
-    "Eller log på med brugernavn og adgangskode":"Or log in with username and password",
-    "Fagperson · Log på":"Healthcare professional · Log in",
-    "Bekræft din identitet":"Confirm your identity",
-    "Fortsæt til sundhed.dk":"Continue to sundhed.dk",
     "Annuller":"Cancel",
+    "Fortsæt":"Continue",
     "Valgt bruger":"Selected user",
     "Patientoverførsel":"Patient transfer",
     "Fagperson › Patientoverførsel":"Healthcare professional › Patient transfer",
-    "MIN AFDELING":"MY DEPARTMENT",
+    "Min afdeling":"My department",
     "Intensiv":"Intensive care",
     "Meddelelser":"Messages",
-    "Patientoverførsel":"Patient transfer",
-    "Her kan du se nye overflytninger og finde en patientoverførsel på patientnummer.":"Here you can see new patient transfers and find a transfer by patient number.",
-    "Ny patientoverførsel · 1":"New patient transfer · 1",
-    "Anders Jensen":"Anders Jensen",
+    "Her kan du se nye patientoverførsler og finde en overførsel på patientnummer.":"Here you can see new patient transfers and find a transfer by patient number.",
+    "Ny patientoverførsel · nr. 1":"New patient transfer · no. 1",
     "CPR-nummer":"CPR number",
     "Aarhus Universitetshospital · Intensiv":"Aarhus University Hospital · Intensive care",
     "Aalborg Universitetshospital · Intensiv":"Aalborg University Hospital · Intensive care",
@@ -633,9 +623,8 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     "Planlagt":"Scheduled",
     "Åbn patientoverførsel":"Open patient transfer",
     "Find patientoverførsel":"Find patient transfer",
+    "Find overførsel":"Find transfer",
     "Indtast nummeret på den patientoverførsel, du vil åbne.":"Enter the number of the patient transfer you want to open.",
-    "Indtast patientnummer":"Enter patient number",
-    "Søg":"Search",
     "Patientoverførsel fundet:":"Patient transfer found:",
     "Patientoverførsel nr. 1 · Anders Jensen":"Patient transfer no. 1 · Anders Jensen",
     "Ingen patientoverførsel fundet. Prøv patientnummer 1.":"No patient transfer found. Try patient number 1.",
@@ -646,15 +635,21 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     "Nuværende hospital":"Current hospital",
     "Nuværende afdeling":"Current department",
     "Overførselsstatus":"Transfer status",
+    "Modtaget":"Received",
+    "Fra":"From",
+    "Til":"To",
+    "Planlagt overflytning":"Planned transfer",
+    "Patientnummer":"Patient number",
+    "Kontrollér de grundlæggende oplysninger, før du bekræfter overflytningen.":"Check the basic information before confirming the transfer.",
+    "Overflytningen er bekræftet":"The transfer is confirmed",
+    "Journalnotater og patientforløb er nu tilgængelige.":"Journal notes and patient course are now available.",
     "Relevante journalnotater fra patientens aktuelle intensivforløb.":"Relevant journal notes from the patient's current intensive care course.",
     "Patientforløb":"Patient course",
     "Kronologisk overblik over det aktuelle forløb.":"Chronological overview of the current course.",
-    "Oplysninger om den planlagte overflytning.":"Information about the planned transfer.",
-    "Afsendende afdeling":"Sending department",
-    "Modtagende afdeling":"Receiving department",
+    "Overflytning planlagt":"Transfer scheduled",
+    "Indlagt på intensiv":"Admitted to intensive care",
     "Status":"Status",
     "Bekræft modtagelse":"Confirm receipt",
-    "Modtagelse bekræftet":"Receipt confirmed",
     "Aktuelt forløb":"Current course",
     "Intensiv vurdering":"Intensive care assessment",
     "Observation":"Observation",
@@ -678,16 +673,17 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     "Gør teksten større eller mindre.":"Make the text larger or smaller.",
     "Linjeafstand":"Line spacing",
     "Giver mere luft mellem tekstlinjerne.":"Adds more space between lines of text.",
-    "Læs siden op":"Read aloud",
+    "🔊 Læs siden op":"🔊 Read aloud",
     "Læs det synlige indhold højt.":"Read the visible content aloud.",
-    "Pause oplæsning":"Pause reading",
+    "⏸ Pause oplæsning":"⏸ Pause reading",
     "Pause eller fortsæt oplæsningen.":"Pause or resume reading.",
     "Stop oplæsningen.":"Stop reading.",
-    "Stop oplæsning":"Stop reading",
-    "Høj kontrast":"High contrast",
+    "⏹ Stop oplæsning":"⏹ Stop reading",
+    "◐ Høj kontrast":"◐ High contrast",
     "Øger kontrasten mellem tekst og baggrund.":"Increases the contrast between text and background.",
-    "Oversæt":"Translate",
+    "🌐 Oversæt":"🌐 Translate",
     "Skift mellem dansk og engelsk.":"Switch between Danish and English.",
+    "Standardvisning":"Default view",
     "Nulstil":"Reset",
     "Luk":"Close"
   };
@@ -727,7 +723,7 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     const wrap=document.createElement("div");
     roots.forEach(el=>wrap.appendChild(el.cloneNode(true)));
     wrap.querySelectorAll("script,style,button,input,select,textarea,[aria-hidden='true'],[hidden]").forEach(x=>x.remove());
-    return (wrap.innerText||"").replace(/\s+/g," ").trim();
+    return (wrap.innerText||wrap.textContent||"").replace(/\s+/g," ").trim();
   }
   function setReadingControls(active){
     $("read").classList.toggle("hidden",active);
