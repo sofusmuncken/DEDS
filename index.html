@@ -382,7 +382,31 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
           </section>
         </div>
 
-        <!-- PATIENT -->
+        <!-- CONFIRM RECEIPT -->
+        <div id="plugin-confirm" class="hidden">
+          <div class="patient-head">
+            <div class="label">Patient</div>
+            <div class="patient-name">Anders Jensen</div>
+            <div class="patient-cpr">CPR: 011026-0000</div>
+          </div>
+
+          <section class="panel" style="margin-top:16px">
+            <div class="panel-title">Bekræft modtagelse</div>
+            <p class="panel-sub">Kontrollér de grundlæggende oplysninger, før du bekræfter overflytningen.</p>
+            <div class="transfer-grid">
+              <div class="transfer-card"><small>Fra</small><strong>Aarhus Universitetshospital · Intensiv</strong></div>
+              <div class="transfer-card"><small>Til</small><strong>Aalborg Universitetshospital · Intensiv</strong></div>
+            </div>
+            <div class="info-grid" style="margin-top:12px">
+              <div class="info"><small>Planlagt overflytning</small><strong>02.10.2026 · 10:30</strong></div>
+              <div class="info"><small>Status</small><span class="pill">Afventer modtagelse</span></div>
+              <div class="info"><small>CPR-nummer</small><strong>011026-0000</strong></div>
+            </div>
+            <button class="btn btn-teal" id="confirm-receipt">Bekræft modtagelse</button>
+          </section>
+        </div>
+
+        <!-- PATIENT AFTER RECEIPT CONFIRMATION -->
         <div id="plugin-patient" class="hidden">
           <div class="patient-head">
             <div class="label">Patient</div>
@@ -392,12 +416,12 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
           <div class="info-grid">
             <div class="info"><small>Nuværende hospital</small><strong>Aarhus Universitetshospital</strong></div>
             <div class="info"><small>Nuværende afdeling</small><strong>Intensiv</strong></div>
-            <div class="info"><small>Overførselsstatus</small><span class="pill" id="transfer-pill">Afventer modtagelse</span></div>
+            <div class="info"><small>Overførselsstatus</small><span class="pill success">Modtaget</span></div>
           </div>
+          <div class="success" style="margin-bottom:16px"><strong>Overflytningen er bekræftet</strong>Journalnotater og patientforløb er nu tilgængelige.</div>
           <div class="tabs">
             <button class="tab active" data-tab="journal">Journalnotater</button>
             <button class="tab" data-tab="timeline">Forløb</button>
-            <button class="tab" data-tab="transfer">Overflytning</button>
           </div>
           <div id="tab-journal" style="padding-top:20px">
             <h2 style="margin:0 0 5px">Journalnotater</h2>
@@ -412,11 +436,6 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
               <div class="event"><div class="event-date">30.09.2026 · 22:15</div><div class="event-title">Indlagt på intensiv</div><div class="event-text">Patienten er modtaget på Aarhus Universitetshospital, Intensiv.</div></div>
               <div class="event"><div class="event-date">30.09.2026 · 18:30</div><div class="event-title">Akut vurdering</div><div class="event-text">Patienten er vurderet med behov for intensiv monitorering.</div></div>
             </div>
-          </div>
-          <div id="tab-transfer" class="hidden" style="padding-top:20px">
-            <h2 style="margin:0 0 5px">Overflytning</h2>
-            <p class="lead">Oplysninger om den planlagte overflytning.</p>
-            <div id="transfer-box"></div>
           </div>
         </div>
 
@@ -460,13 +479,20 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
   // Plugin pages
   function showPluginPage(page){
     $("plugin-home").classList.toggle("hidden",page!=="home");
+    $("plugin-confirm").classList.toggle("hidden",page!=="confirm");
     $("plugin-patient").classList.toggle("hidden",page!=="patient");
     $("plugin-placeholder").classList.toggle("hidden",page!=="placeholder");
   }
 
-  $("open-notification").onclick=()=>{
+  function openTransferForConfirmation(){
     $("search-status").textContent="";
     $("results").innerHTML="";
+    showPluginPage("confirm");
+  }
+
+  $("open-notification").onclick=openTransferForConfirmation;
+
+  $("confirm-receipt").onclick=()=>{
     showPluginPage("patient");
     activateTab("journal");
   };
@@ -477,9 +503,9 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
       $("search-status").innerHTML="<strong>Patientoverførsel fundet:</strong> Anders Jensen";
       $("results").innerHTML='<div class="result-card" role="button" tabindex="0"><strong>Patientoverførsel nr. 1 · Anders Jensen</strong><span>CPR: 011026-0000 · Aarhus Universitetshospital · Intensiv</span></div>';
       const result=$("results").firstElementChild;
-      result.onclick=()=>{showPluginPage("patient");activateTab("journal")};
+      result.onclick=openTransferForConfirmation;
       result.onkeydown=e=>{if(e.key==="Enter")result.click()};
-      showPluginPage("patient");activateTab("journal");
+      openTransferForConfirmation();
     }else{
       $("search-status").textContent="Ingen patientoverførsel fundet. Prøv patientnummer 1.";
       $("results").innerHTML="";
@@ -488,10 +514,10 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
   };
 
   function activateTab(tab){
-    ["journal","timeline","transfer"].forEach(t=>{
+    ["journal","timeline"].forEach(t=>{
       $("tab-"+t).classList.toggle("hidden",t!==tab);
-      document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));
     });
+    document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));
   }
   document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>activateTab(b.dataset.tab));
   $("notes").innerHTML=`
@@ -509,23 +535,6 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
   document.querySelectorAll(".note.clickable").forEach(note=>{
     note.addEventListener("click",()=>toggleNote(note));
     note.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();toggleNote(note)}});
-  });
-
-  $("transfer-box").innerHTML=`
-    <div class="info-grid">
-      <div class="info"><small>Afsendende afdeling</small><strong>Aarhus Universitetshospital · Intensiv</strong></div>
-      <div class="info"><small>Modtagende afdeling</small><strong>Aalborg Universitetshospital · Intensiv</strong></div>
-      <div class="info"><small>Status</small><span class="pill">Afventer modtagelse</span></div>
-    </div>
-    <button class="btn btn-teal" id="confirm-transfer">Bekræft modtagelse</button>`;
-
-  document.addEventListener("click",e=>{
-    if(e.target?.id==="confirm-transfer"){
-      $("transfer-pill").textContent="Modtaget";
-      $("transfer-pill").classList.add("success");
-      e.target.textContent="Modtagelse bekræftet";
-      e.target.disabled=true;
-    }
   });
 
   document.querySelectorAll(".side").forEach(btn=>btn.onclick=()=>{
