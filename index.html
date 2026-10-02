@@ -21,6 +21,8 @@ a{color:inherit}
 /* Shared public header */
 .site-header{background:#fff;border-bottom:1px solid var(--border)}
 .site-header .inner{width:min(1180px,calc(100% - 40px));height:72px;margin:auto;display:flex;align-items:center;gap:32px}
+.sd-logo[data-logo]{cursor:pointer}
+.sd-logo[data-logo]:focus-visible{outline:3px solid #8fd0d8;outline-offset:4px}
 .sd-logo{font-size:27px;font-weight:700;letter-spacing:-1.5px;color:var(--red);white-space:nowrap}
 .sd-heart{display:inline-block;width:.36em;height:.36em;margin:0 .08em 0 .12em;fill:currentColor;transform:rotate(14deg);vertical-align:baseline}
 .public-nav{display:flex;align-items:stretch;height:100%;gap:4px;flex:1}
@@ -70,6 +72,19 @@ a{color:inherit}
 .identity{border:1px solid var(--border);background:#f8fafb;padding:16px;margin:22px 0}
 .identity small{color:var(--muted);display:block;margin-bottom:4px}.identity strong{font-size:17px}
 .auth-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+
+
+/* Under udvikling */
+.card.link{cursor:pointer;transition:border-color .15s,box-shadow .15s}
+.card.link:hover{border-color:var(--teal);box-shadow:0 4px 14px rgba(23,50,77,.10)}
+.card.link:focus-visible{outline:3px solid #8fd0d8;outline-offset:2px}
+.dev-shell{min-height:calc(100vh - 72px);display:flex;align-items:flex-start;justify-content:center;padding:70px 20px}
+.dev-card{width:min(560px,100%);background:#fff;border:1px solid var(--border);border-top:5px solid var(--red);padding:38px 40px;text-align:center}
+.dev-icon{font-size:42px;line-height:1;margin-bottom:14px}
+.dev-card h1{font-size:30px;margin:0 0 14px;color:var(--blue)}
+.dev-card p{color:var(--muted);line-height:1.6;font-size:15px;margin:0 0 10px}
+.dev-card .dev-picked strong{color:var(--blue)}
+.dev-card .btn{margin-top:18px}
 
 /* Plugin */
 .plugin-header{background:#fff;border-bottom:1px solid var(--border)}
@@ -128,6 +143,25 @@ a{color:inherit}
 .result-card{margin-top:12px;border:1px solid var(--border);background:#fff;padding:14px;cursor:pointer}
 .result-card:hover{border-color:var(--teal);background:#f8fbfc}
 .result-card strong{display:block;color:var(--blue)}.result-card span{font-size:13px;color:var(--muted)}
+
+/* Login-felter */
+.login-card{border-radius:10px;box-shadow:0 10px 30px rgba(23,50,77,.08)}
+.login-card .field{margin:18px 0}
+.login-card .field label{display:block;margin-bottom:7px;font-size:14px;font-weight:700;color:var(--blue)}
+.login-card .field input{
+  width:100%;height:50px;padding:0 15px;
+  font-size:16px;color:var(--ink);
+  background:#f8fafb;border:1.5px solid #b9c6cf;border-radius:8px;
+  transition:border-color .15s,box-shadow .15s,background .15s;
+}
+.login-card .field input::placeholder{color:#8da0ae}
+.login-card .field input:hover{border-color:#8aa3b3}
+.login-card .field input:focus{outline:none;background:#fff;border-color:var(--teal);box-shadow:0 0 0 4px rgba(0,124,145,.16)}
+.login-card .error{background:#fdecee;border:1px solid #f0b8c0;border-left:4px solid var(--red);color:#8f1728;border-radius:6px;padding:11px 13px;font-size:14px;line-height:1.4;margin-top:6px}
+.login-card .btn{border-radius:8px;height:50px;font-size:16px;transition:background .15s,box-shadow .15s}
+.login-card .btn-red:hover{box-shadow:0 4px 12px rgba(181,31,53,.28)}
+.login-card .btn:focus-visible,.nemlogin-btn:focus-visible{outline:3px solid #8fd0d8;outline-offset:2px}
+.nemlogin-btn{border-radius:8px;height:50px}
 
 /* ===== Tilgængelighed (Universal design) ===== */
 .ud{position:fixed;bottom:20px;right:20px;z-index:2000;background:transparent}
@@ -225,14 +259,14 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
 <div id="public-screen">
   <header class="site-header">
     <div class="inner">
-      <div class="sd-logo" role="img" aria-label="sundhed.dk">sundhed<svg class="sd-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 4.5 6.4 4.5c2.1 0 3.9 1.2 5.6 3.2 1.7-2 3.5-3.2 5.6-3.2 3.7 0 5.5 3.9 4 7.3C19.5 16.4 12 21 12 21z"/></svg>dk</div>
+      <div class="sd-logo" role="link" tabindex="0" aria-label="sundhed.dk – gå til forsiden" data-logo>sundhed<svg class="sd-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 4.5 6.4 4.5c2.1 0 3.9 1.2 5.6 3.2 1.7-2 3.5-3.2 5.6-3.2 3.7 0 5.5 3.9 4 7.3C19.5 16.4 12 21 12 21z"/></svg>dk</div>
       <nav class="public-nav">
-        <button>Borger</button>
-        <button class="active">Fagperson</button>
-        <button>Dine sundhedsdata</button>
+        <button data-dev="Borger">Borger</button>
+        <button class="active" data-home>Fagperson</button>
+        <button data-dev="Dine sundhedsdata">Dine sundhedsdata</button>
       </nav>
       <button id="public-login" class="header-action">Log på</button>
-      <button class="menu-btn">☰ Menu</button>
+      <button class="menu-btn" data-dev="Menu">☰ Menu</button>
     </div>
   </header>
   <main>
@@ -243,14 +277,14 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
         <p>Som sundhedsfaglig kan du få adgang til sundhed.dk's tjenester og relevante digitale løsninger. Log på for at fortsætte.</p>
         <div class="hero-actions">
           <button class="btn btn-red" id="hero-login">Log på som fagperson</button>
-          <button class="btn btn-outline">Læs mere om fagperson</button>
+          <button class="btn btn-outline" data-dev="Læs mere om fagperson">Læs mere om fagperson</button>
         </div>
       </div>
     </section>
     <section class="cards">
-      <article class="card"><h3>Sundhedsjournalen</h3><p>Adgang til relevante sundhedsoplysninger på tværs af sundhedsvæsenet.</p></article>
-      <article class="card"><h3>Patientbehandling</h3><p>Genveje til faglige værktøjer og digitale løsninger.</p></article>
-      <article class="card"><h3>Digitale tjenester</h3><p>Samlet adgang til løsninger, der understøtter arbejdet med patienterne.</p></article>
+      <article class="card link" data-dev="Sundhedsjournalen" tabindex="0" role="link"><h3>Sundhedsjournalen</h3><p>Adgang til relevante sundhedsoplysninger på tværs af sundhedsvæsenet.</p></article>
+      <article class="card link" data-dev="Patientbehandling" tabindex="0" role="link"><h3>Patientbehandling</h3><p>Genveje til faglige værktøjer og digitale løsninger.</p></article>
+      <article class="card link" data-dev="Digitale tjenester" tabindex="0" role="link"><h3>Digitale tjenester</h3><p>Samlet adgang til løsninger, der understøtter arbejdet med patienterne.</p></article>
     </section>
   </main>
 </div>
@@ -259,11 +293,11 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
 <div id="login-screen" class="hidden">
   <header class="site-header">
     <div class="inner">
-      <div class="sd-logo" role="img" aria-label="sundhed.dk">sundhed<svg class="sd-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 4.5 6.4 4.5c2.1 0 3.9 1.2 5.6 3.2 1.7-2 3.5-3.2 5.6-3.2 3.7 0 5.5 3.9 4 7.3C19.5 16.4 12 21 12 21z"/></svg>dk</div>
+      <div class="sd-logo" role="link" tabindex="0" aria-label="sundhed.dk – gå til forsiden" data-logo>sundhed<svg class="sd-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 4.5 6.4 4.5c2.1 0 3.9 1.2 5.6 3.2 1.7-2 3.5-3.2 5.6-3.2 3.7 0 5.5 3.9 4 7.3C19.5 16.4 12 21 12 21z"/></svg>dk</div>
       <nav class="public-nav">
-        <button>Borger</button>
-        <button class="active">Fagperson</button>
-        <button>Dine sundhedsdata</button>
+        <button data-dev="Borger">Borger</button>
+        <button class="active" data-home>Fagperson</button>
+        <button data-dev="Dine sundhedsdata">Dine sundhedsdata</button>
       </nav>
       <div style="margin-left:auto;color:#536b7d;font-size:14px">Fagperson</div>
     </div>
@@ -323,11 +357,36 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
   </main>
 </div>
 
+<!-- UNDER UDVIKLING -->
+<div id="dev-screen" class="hidden">
+  <header class="site-header">
+    <div class="inner">
+      <div class="sd-logo" role="link" tabindex="0" aria-label="sundhed.dk – gå til forsiden" data-logo>sundhed<svg class="sd-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 4.5 6.4 4.5c2.1 0 3.9 1.2 5.6 3.2 1.7-2 3.5-3.2 5.6-3.2 3.7 0 5.5 3.9 4 7.3C19.5 16.4 12 21 12 21z"/></svg>dk</div>
+      <nav class="public-nav">
+        <button data-dev="Borger">Borger</button>
+        <button class="active" data-home>Fagperson</button>
+        <button data-dev="Dine sundhedsdata">Dine sundhedsdata</button>
+      </nav>
+      <button class="menu-btn" data-dev="Menu">☰ Menu</button>
+    </div>
+  </header>
+  <main class="dev-shell">
+    <section class="dev-card">
+      <div class="dev-icon" aria-hidden="true">🚧</div>
+      <div class="kicker">Under udvikling</div>
+      <h1>Siden er under udvikling</h1>
+      <p class="dev-picked">Du har valgt: <strong id="dev-name"></strong></p>
+      <p>Denne del af sundhed.dk er endnu ikke tilgængelig – vi arbejder på det.</p>
+      <button class="btn btn-red" id="dev-back">← Tilbage</button>
+    </section>
+  </main>
+</div>
+
 <!-- PLUGIN -->
 <div id="plugin-screen" class="hidden">
   <header class="plugin-header">
     <div class="inner">
-      <div class="sd-logo" style="font-size:23px" role="img" aria-label="sundhed.dk">sundhed<svg class="sd-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 4.5 6.4 4.5c2.1 0 3.9 1.2 5.6 3.2 1.7-2 3.5-3.2 5.6-3.2 3.7 0 5.5 3.9 4 7.3C19.5 16.4 12 21 12 21z"/></svg>dk</div>
+      <div class="sd-logo" style="font-size:23px" role="link" tabindex="0" aria-label="sundhed.dk – gå til forsiden" data-logo>sundhed<svg class="sd-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 4.5 6.4 4.5c2.1 0 3.9 1.2 5.6 3.2 1.7-2 3.5-3.2 5.6-3.2 3.7 0 5.5 3.9 4 7.3C19.5 16.4 12 21 12 21z"/></svg>dk</div>
       <div class="plugin-brand">Patientoverførsel</div>
       <nav class="plugin-nav" aria-label="Primær navigation"></nav>
       <div class="user-chip"><strong>test</strong>Læge · Aalborg UH · Intensiv</div>
@@ -451,9 +510,11 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
 (()=>{
   const $=id=>document.getElementById(id);
   const body=document.body;
-  const appScreens=["public-screen","login-screen","auth-screen","plugin-screen"];
+  const appScreens=["public-screen","login-screen","auth-screen","dev-screen","plugin-screen"];
+  let current="public-screen",prev="public-screen";
 
   function show(id){
+    current=id;
     appScreens.forEach(x=>$(x)?.classList.toggle("hidden",x!==id));
     applyTextScale(Number($("size").value));
   }
@@ -473,6 +534,33 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
   $("mitid-btn").onclick=()=>show("auth-screen");
   $("auth-continue").onclick=()=>show("plugin-screen");
   $("auth-cancel").onclick=()=>show("login-screen");
+
+  // "Under udvikling"-sider
+  function openDev(label){
+    if(current!=="dev-screen")prev=current;
+    $("dev-name").textContent=label;
+    show("dev-screen");
+    if(english)translateTree(true);
+    window.scrollTo(0,0);
+    try{history.pushState({dev:1},"")}catch(e){}
+  }
+  document.querySelectorAll("[data-dev]").forEach(el=>{
+    el.addEventListener("click",()=>openDev(el.dataset.dev));
+    if(el.tagName!=="BUTTON")el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openDev(el.dataset.dev)}});
+  });
+  document.querySelectorAll("[data-home]").forEach(el=>el.addEventListener("click",()=>show("public-screen")));
+  $("dev-back").onclick=()=>{
+    try{if(history.state&&history.state.dev){history.back();return}}catch(e){}
+    show(prev);
+  };
+  window.addEventListener("popstate",()=>{if(current==="dev-screen")show(prev)});
+
+  // Klik på logoet -> forsiden
+  document.querySelectorAll("[data-logo]").forEach(el=>{
+    const go=()=>{if("speechSynthesis"in window)speechSynthesis.cancel();show("public-screen");window.scrollTo(0,0)};
+    el.addEventListener("click",go);
+    el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go()}});
+  });
 
   // Plugin pages
   function showPluginPage(page){
@@ -686,6 +774,12 @@ body.ud-line-spaced *{line-height:var(--ud-line-height,1.5)!important}
     "Skift mellem dansk og engelsk.":"Switch between Danish and English.",
     "Standardvisning":"Default view",
     "Nulstil":"Reset",
+    "Under udvikling":"Under development",
+    "Siden er under udvikling":"This page is under development",
+    "Du har valgt:":"You have selected:",
+    "Denne del af sundhed.dk er endnu ikke tilgængelig – vi arbejder på det.":"This part of sundhed.dk is not available yet – we are working on it.",
+    "← Tilbage":"← Back",
+    "☰ Menu":"☰ Menu",
     "Luk":"Close"
   };
   let english=false;
